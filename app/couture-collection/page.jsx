@@ -32,13 +32,13 @@ export default function Couture() {
       <section id="explore" className="couture-categories">
 
         <div className="couture-category-card">
-          <img src="/images/lehenga-cat.jpg" />
+          <img src="/couture-Lehenga.jpeg" alt="Lehengas" />
           <h3>Lehengas</h3>
           <p>Intricate hand-embroidered bridal lehengas.</p>
         </div>
 
         <div className="couture-category-card">
-          <img src="/images/saree-cat.jpg" />
+          <img src="/couture-sarees.jpeg" alt="Sarees" />
           <h3>Sarees</h3>
           <p>Contemporary sarees adorned with heritage craftsmanship.</p>
         </div>
