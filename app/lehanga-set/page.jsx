@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+import BookAConsult from "../components/book-a-consult";
 export default function LehengaSet() {
   return (
     <main className="couture-page">
@@ -116,15 +118,8 @@ export default function LehengaSet() {
         </div>
       </section>
 
-      {/* ===========================
-          7. CTA SECTION
-      ============================ */}
-      <section className="couture-cta">
-        <h2>Begin Your Bridal Journey</h2>
-        <a href="/book-a-consult" className="couture-button">
-          Book Appointment →
-        </a>
-      </section>
+      <BookAConsult />
+      <Footer />
 
     </main>
   );

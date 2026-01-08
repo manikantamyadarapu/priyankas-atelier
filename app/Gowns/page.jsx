@@ -1,3 +1,6 @@
+import Footer from "../components/Footer";
+import BookAConsult from "../components/book-a-consult";
+
 export default function Gowns() {
   return (
     <main className="couture-page">
@@ -116,16 +119,10 @@ export default function Gowns() {
           </div>
         </div>
       </section>
+      <BookAConsult />
+      <Footer />
+      
 
-      {/* ===========================
-          7. CTA SECTION
-      ============================ */}
-      <section className="couture-cta">
-        <h2>Create Your Dream Look</h2>
-        <a href="/book-a-consult" className="couture-button">
-          Book Appointment →
-        </a>
-      </section>
 
     </main>
   );

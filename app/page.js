@@ -20,7 +20,7 @@ export default function Home() {
       />
          <CategorySection
         title="Lehenga Set"
-        image="/Book Banner.jpg"
+        image="bewf"
         link="/lehenga-set"
       />
         <CategorySection
@@ -41,7 +41,7 @@ export default function Home() {
       />
       <CategorySection
         title="Ten year's of pk"
-        image="/ten-years-of-pk"
+        image="/ten_years.jpg"
         link="/ten-years-of-pk"
       />
       <BookAConsult/>

@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+import BookAConsult from "../components/book-a-consult";
 export default function RTWCollection() {
   return (
     <main className="couture-page">
@@ -77,15 +79,8 @@ export default function RTWCollection() {
 
         <img src="/images/rtw-craft.jpg" className="craft-img" />
       </section>
-
-      {/* CTA */}
-      <section className="couture-cta">
-        <h2>Explore More Designs</h2>
-        <a href="/book-a-consult" className="couture-button">
-          Book Appointment →
-        </a>
-      </section>
-
+      <BookAConsult />
+      <Footer />
     </main>
   );
 }

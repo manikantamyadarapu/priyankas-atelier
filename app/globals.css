@@ -156,11 +156,12 @@ body {
 }
 
 .founder-subtitle {
-  font-size: 0.81rem;
+  font-size: 1rem;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
   color: #6e6c67;
   margin-bottom: 1.12rem;
+;
 }
 
 .founder-title {
@@ -175,16 +176,17 @@ body {
 .founder-underline {
   width: 3.12rem;
   height: 0.12rem;
-  background: #000000; /* gold line */
+  background: #000000; 
   margin: 0.94rem auto 1.56rem;
 }
 
 .founder-text {
-  font-size: 1.12rem;
+  font-size: 1.3rem;
   line-height: 1.8;
-  color: #514c43;
+  color: #000000;
   max-width: 34.38rem;
   margin: 0 auto 1.56rem;
+  font-weight: 400 !important;
 }
 
 .founder-link {
@@ -192,6 +194,8 @@ body {
   color: #3d331f;
   text-decoration: underline;
   cursor: pointer;
+    font-weight: 400 !important;
+
 }
 
 .founder-image-container {
@@ -586,8 +590,6 @@ body {
   backdrop-filter: blur(0.06rem);
 }
 
-
-
 .consult-sub {
   font-size: 0.88rem;
   letter-spacing: 0.19rem;
@@ -634,7 +636,7 @@ body {
 }
 
 .consult-btn:hover {
-  background: rgb(255, 255, 255);           /* invert like luxury btn */
+  background: rgb(255, 255, 255);           
   color: rgb(0, 0, 0);
 }
 /* ===============================
