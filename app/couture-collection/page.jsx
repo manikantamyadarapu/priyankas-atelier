@@ -46,13 +46,13 @@ export default function Couture() {
         </div>
 
         <div className="couture-category-card">
-          <img src="/images/bridal-cat.jpg" />
+          <img src="/bridal-couture.jpg" />
           <h3>Bridal Couture</h3>
           <p>Signature couture for weddings & grand celebrations.</p>
         </div>
 
         <div className="couture-category-card">
-          <img src="/images/reception-cat.jpg" />
+          <img src="/reception-wear.jpg" />
           <h3>Reception Wear</h3>
           <p>Modern silhouettes designed for evening glamour.</p>
         </div>
@@ -67,8 +67,8 @@ export default function Couture() {
         <p>A curated selection of our most loved couture ensembles.</p>
 
         <div className="featured-grid">
-          <img src="/images/c1.jpg" />
-          <img src="/images/c2.jpg" />
+          <img src="/featured-couture1.jpg" />
+          <img src="/" />
           <img src="/images/c3.jpg" />
           <img src="/images/c4.jpg" />
           <img src="/images/c5.jpg" />
