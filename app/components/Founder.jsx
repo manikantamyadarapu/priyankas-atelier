@@ -14,11 +14,7 @@ export default function Founder() {
           <div className="founder-underline"></div>
 
           <p className="founder-text">
-            Bhargavi’s admiration for creativity was instilled in her from
-            when she was a child. She had always loved art and design
-            and sees them as an expression of one’s soul. She blossomed
-            under the watchful eye of her mother — a woman who effortlessly
-            transforms simple fabrics into phenomenal works of art.
+            Priyanka’s Atelier is a designer fashion label born from passion, creativity, and a love for handcrafted elegance. The journey began with Priyanka, who discovered her interest in fashion design at the age of 20 and turned her dream into reality through thoughtful designs and fine craftsmanship. Each creation reflects a blend of modern aesthetics and timeless style, designed to celebrate individuality, confidence, and grace in every woman.
           </p>
 
           <a href="#" className="founder-link">About the founder</a>

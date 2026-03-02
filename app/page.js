@@ -20,7 +20,7 @@ export default function Home() {
       />
          <CategorySection
         title="Lehenga Set"
-        image="bewf"
+        image="lehenga.jpg"
         link="/lehenga-set"
       />
         <CategorySection
