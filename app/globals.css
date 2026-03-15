@@ -7,7 +7,7 @@
 
 body {
   font-family: "Cormorant Garamond", serif;
-  background: white !important;
+  background: transparent !important;
   color: #000000;
 }
 
@@ -115,13 +115,16 @@ body {
 
 .nav-menu a {
   text-decoration: none;
-  letter-spacing: 0.11rem;
-  font-size: 0.94rem;
-  font-weight: 500;
+  letter-spacing: 0.08rem;
+  font-size: 1.05rem;     
+  font-weight: 500;       
   transition: 0.3s ease;
-  color: black;
+  color: #000;
 }
 
+.nav-menu a:hover {
+  opacity: 0.65;
+}
 /* Transparent mode on top of hero */
 .navbar:not(.navbar-scrolled) .nav-logo h1,
 .navbar:not(.navbar-scrolled) .nav-menu a {
@@ -195,11 +198,12 @@ body {
 }
 
 .founder-subtitle {
-  font-size: 1rem;
+  font-size: 1.15rem;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
-  color: #6e6c67;
+  color: #494949;
   margin-bottom: 1.12rem;
+  font-weight: 500;
 }
 
 .founder-title {
@@ -219,12 +223,12 @@ body {
 }
 
 .founder-text {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  color: #000000;
-  max-width: 34.38rem;
-  margin: 0 auto 1.56rem;
-  font-weight: 400 !important;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #1a1a1a;
+  max-width: auto;
+  margin: 0 auto 0.9rem;
+  font-weight: 400;
 }
 
 .founder-link {
@@ -282,7 +286,7 @@ body {
    PREMIUM DOUBLE-BACKGROUND FOOTER
 ============================== */
 
-/* OUTER BACKGROUND (PAGE LEVEL) */
+/* OUTER BACKGROUND */
 .footer-outer {
   background: #000000;
   padding: 4rem 2rem;
@@ -290,9 +294,9 @@ body {
 
 /* INNER FOOTER CARD */
 .footer-wrapper {
-  background: #383838;              /* inner lighter background */
-  min-height: 75vh;                 /* BIG FOOTER */
-  padding: 8rem 4rem 6rem;
+  background: transparent;
+  min-height: auto;                /* removed 75vh */
+  padding: 8rem 4rem 6em;         /* reduced spacing */
   border-radius: 28px;
   display: flex;
   flex-direction: column;
@@ -303,13 +307,13 @@ body {
 
 /* FOOTER GRID */
 .footer-columns {
-  max-width: 81.25rem;
+  max-width: 97.25rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 4fr 1fr 1fr 1fr 1fr;
-  gap: 5rem;
+  grid-template-columns: 4fr 1fr 1fr 1fr 1fr 3fr;
+  gap: 3rem;
   margin-top: 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;   /* reduced from 8rem */
 }
 
 /* LEFT ABOUT COLUMN */
@@ -355,7 +359,7 @@ body {
 }
 
 .footer-col a:hover {
-  color: #000000;
+  color: #ffffff;   /* fixed hover */
 }
 
 /* SOCIAL ICONS */
@@ -367,38 +371,88 @@ body {
 
 .social-icon {
   font-size: 20px;
-  color: #000000;
+  color: rgba(255,255,255,0.6);   /* fixed visibility */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #000000;
+  color: #ffffff;
   transform: translateY(-2px);
 }
+.footer-newsletter {
+  max-width: 260px;
+}
+
+.newsletter-text {
+  font-size: 0.85rem;
+  color: rgb(170,170,170);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-family: "Optima", sans-serif;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 8px 10px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.newsletter-btn {
+  padding: 8px 14px;
+  background: white;
+  color: black;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-btn:hover {
+  opacity: 0.8;
+}
+
+FRAME IMAGE
+.footer-frame {
+  display: block;
+  margin: 0 auto 0.7rem auto;
+  max-width: 450px;
+  width: 100%;
+  opacity: 0.28;   /* elegant watermark look */
+}
+
 
 /* COPYRIGHT */
 .copyright {
-  margin-top: auto;                 /* pushes to bottom */
-  padding-top: 3rem;
+  margin-top: 7rem;
+  padding-top: 1rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   color: rgb(170, 170, 170);
-  border-top: 1px solid rgba(255,255,255,0.08);
   font-family: "Optima", sans-serif;
 }
 
 /* MOBILE */
 @media (max-width: 56.25rem) {
   .footer-wrapper {
-    min-height: auto;
-    padding: 5rem 2rem 4rem;
+    padding: 4rem 2rem 3rem;
     border-radius: 18px;
   }
 
   .footer-columns {
     grid-template-columns: 1fr;
-    gap: 3.5rem;
-    margin-bottom: 4rem;
+    gap: 3rem;
+    margin-bottom: 2rem;
   }
 
   .footer-title {
@@ -410,27 +464,38 @@ body {
   .footer-outer {
     padding: 2rem 1rem;
   }
+
   .footer-wrapper {
     padding: 3rem 1.5rem 2rem;
     border-radius: 12px;
   }
+
   .footer-columns {
     gap: 2rem;
   }
+
   .footer-title {
     font-size: 1.4rem;
   }
+
   .footer-description {
     font-size: 0.85rem;
   }
+
   .footer-heading {
     font-size: 0.8rem;
   }
+
   .footer-col a {
     font-size: 0.85rem;
   }
+
   .copyright {
     font-size: 0.8rem;
+  }
+
+  .footer-frame {
+    max-width: 300px;
   }
 }
 

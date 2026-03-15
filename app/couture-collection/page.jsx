@@ -8,7 +8,7 @@ export default function Couture() {
           1. HERO BANNER
       ============================ */}
       <section className="couture-hero">
-        <img src="/images/couture-hero.jpg" className="couture-hero-img" />
+        <img src="/couture-page-header.jpg" className="couture-hero-img" />
         
         <div className="couture-hero-content">
           <h1>Couture Collection</h1>
@@ -68,11 +68,9 @@ export default function Couture() {
 
         <div className="featured-grid">
           <img src="/featured-couture1.jpg" />
-          <img src="/" />
-          <img src="/images/c3.jpg" />
-          <img src="/images/c4.jpg" />
-          <img src="/images/c5.jpg" />
-          <img src="/images/c6.jpg" />
+          <img src="/featured-couture2.jpg" />
+          <img src="/featured-couture3.jpg" />
+          <img src="/featured-couture4.jpg" />
         </div>
       </section>
 
@@ -90,32 +88,13 @@ export default function Couture() {
           </p>
         </div>
 
-        <img src="/images/couture-craft.jpg" className="craft-img" />
+        <img src="/featured-couture-modern.jpg" className="craft-img" />
       </section>
 
       {/* ===========================
           6. TESTIMONIALS
       ============================ */}
-      <section className="couture-testimonials">
-        <h2>Loved by Brides & Celebrities</h2>
-
-        <div className="testimonials-grid">
-          <div className="testimonial-card">
-            <img src="/images/test1.jpg" />
-            <p>“A masterpiece that exceeded all expectations.”</p>
-          </div>
-
-          <div className="testimonial-card">
-            <img src="/images/test2.jpg" />
-            <p>“Every detail felt personal and luxurious.”</p>
-          </div>
-
-          <div className="testimonial-card">
-            <img src="/images/test3.jpg" />
-            <p>“Truly the finest couture experience.”</p>
-          </div>
-        </div>
-      </section>
+     
       <BookAConsult />
       <Footer />
     </main>
