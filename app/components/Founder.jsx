@@ -13,10 +13,16 @@ export default function Founder() {
 
           <div className="founder-underline"></div>
 
-          <p className="founder-text">
-            Priyanka’s Atelier is a designer fashion label born from passion, creativity, and a love for handcrafted elegance. The journey began with Priyanka, who discovered her interest in fashion design at the age of 20 and turned her dream into reality through thoughtful designs and fine craftsmanship. Each creation reflects a blend of modern aesthetics and timeless style, designed to celebrate individuality, confidence, and grace in every woman.
-          </p>
+<p className="founder-text">
+  Priyanka’s Atelier is a designer fashion label inspired by passion,
+  creativity, and handcrafted elegance. Founded by Priyanka at the age
+  of 20, the brand reflects a journey of dedication, artistry, and refined
+  craftsmanship. <br /><br />
 
+  Every creation blends modern aesthetics with timeless style,
+  thoughtfully designed to celebrate individuality, confidence,
+  and grace in every woman.
+</p>
           <a href="#" className="founder-link">About the founder</a>
         </div>
 

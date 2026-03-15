@@ -1,7 +1,51 @@
+"use client";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
+ const sendEmail = (e) => {
+  e.preventDefault();
+
+  const templateParams = {
+    user_email: email,
+    time: new Date().toLocaleString(),
+  };
+
+  // 1️⃣ Email to admin (you)
+  emailjs
+    .send(
+      "service_cwqep3d",
+      "template_kf7z3m5",
+      templateParams,
+      "K-5pSSnje4MzUMVPj"
+    )
+    .then(() => {
+      console.log("Admin notified");
+    });
+
+  // 2️⃣ Welcome email to subscriber
+  emailjs
+    .send(
+      "service_cwqep3d",
+      "template_ih6d4tq",
+      templateParams,
+      "K-5pSSnje4MzUMVPj"
+    )
+    .then(() => {
+      alert("Thank you for subscribing!");
+      setEmail("");
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Subscription failed");
+    });
+};
+
   return (
     <footer className="footer-outer">
       {/* INNER CARD */}
@@ -65,7 +109,6 @@ export default function Footer() {
                 >
                   <FaWhatsapp />
                 </a>
-
                 <a
                   href="mailto:care@priyankasatelier.in"
                   className="social-icon"
@@ -75,13 +118,44 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+             {/* NEWSLETTER */}
+<div className="footer-col footer-newsletter">
 
+      <h3 className="footer-heading">STAY CONNECTED</h3>
+
+      <p className="newsletter-text">
+        Sign up for our newsletter to receive the latest updates,
+        exclusive insights, and special offers from Priyanka’s Atelier.
+      </p>
+
+      <form className="newsletter-form" onSubmit={sendEmail}>
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="newsletter-input"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+
+        <button type="submit" className="newsletter-btn">
+          Subscribe
+        </button>
+
+      </form>
+
+    </div>
           </div>
-
           {/* COPYRIGHT */}
-          <div className="copyright">
-            © {new Date().getFullYear()} Priyanka’s Atelier.
-          </div>
+<div className="copyright">
+  {/* <img 
+    src="./Footer-frame.png" 
+    alt="decorative frame" 
+    className="footer-frame" 
+  /> */}
+  © {new Date().getFullYear()} Priyanka’s Atelier.
+</div>
         </div>
       </div>
     </footer>
