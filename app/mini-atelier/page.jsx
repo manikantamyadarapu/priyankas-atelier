@@ -29,25 +29,25 @@ export default function MiniAtelier() {
 <section id="explore" className="couture-categories">
 
   <div className="couture-category-card">
-    <img src="/images/birthday1.jpg" />
+    <img src="/firsbirthday-mini.jpg" />
     <h3> First Birthday Outfits</h3>
     <p>Adorable, premium outfits for your little one’s big day.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/traditional-l.jpg" />
+    <img src="/traditional-mini.jpg" />
     <h3>Traditional Lehengas</h3>
     <p>Handcrafted lehengas with soft fabrics & elegant details.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/western-frock.jpg" />
+    <img src="/western-mini.jpg" />
     <h3>Western Frocks</h3>
     <p>Charming and playful western-style designer frocks.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/traditional-frock.jpg" />
+    <img src="/traditionalfrock-mini.jpg" />
     <h3>Traditional Frocks</h3>
     <p>Classic blouse & skirt–style frocks with ethnic detailing.</p>
   </div>
@@ -61,12 +61,10 @@ export default function MiniAtelier() {
         <p>Crafted with care, love, and playful charm.</p>
 
         <div className="featured-grid">
-          <img src="/images/mf1.jpg" />
-          <img src="/images/mf2.jpg" />
-          <img src="/images/mf3.jpg" />
-          <img src="/images/mf4.jpg" />
-          <img src="/images/mf5.jpg" />
-          <img src="/images/mf6.jpg" />
+          <img src="/featured1-mini.jpg" />
+          <img src="/featured2-mini.jpg" />
+          <img src="/featured3-mini.jpg" />
+          <img src="/featured4-mini.jpg" />
         </div>
       </section>
 
@@ -80,7 +78,7 @@ export default function MiniAtelier() {
           </p>
         </div>
 
-        <img src="/images/mini-craft.jpg" className="craft-img" />
+        <img src="/heritage-mini.jpg" className="craft-img" />
       </section>
       <BookAConsult />
       <Footer />  

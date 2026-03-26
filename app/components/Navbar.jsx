@@ -41,6 +41,7 @@ export default function Navbar() {
 
       <nav className="nav-menu">
         <a href="/couture-collection">COUTURE COLLECTION</a>
+        <a href="/blouses">BLOUSES</a>
         <a href="/lehanga-set">LEHENGA SET</a>
         <a href="/Gowns">GOWNS</a>
         <a href="/rtw-collection">RTW COLLECTION</a>

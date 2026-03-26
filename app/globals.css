@@ -37,30 +37,19 @@ body {
   background: rgba(0,0,0,0.2);
 }
 
-/* RESPONSIVE HERO */
 @media (max-width: 48rem) {
-  .hero-title {
-    font-size: 2.62rem;
-  }
-  .hero-subtitle {
-    font-size: 1rem;
-  }
+  .hero-title { font-size: 2.62rem; }
+  .hero-subtitle { font-size: 1rem; }
 }
 
 @media (max-width: 36rem) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-subtitle {
-    font-size: 0.875rem;
-  }
-  .hero-section {
-    height: 80vh;
-  }
+  .hero-title { font-size: 2rem; }
+  .hero-subtitle { font-size: 0.875rem; }
+  .hero-section { height: 80vh; }
 }
 
 /* ==============================
-   SABYASACHI–STYLE NAVBAR
+   NAVBAR
 ============================== */
 
 .navbar {
@@ -76,26 +65,22 @@ body {
   transform: translateY(0);
 }
 
-/* Hide when scrolling down */
 .navbar-hidden {
   transform: translateY(-120%);
   opacity: 0;
 }
 
-/* Show when scrolling up */
 .navbar-visible {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* When scrolled below hero section */
 .navbar-scrolled {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(0.25rem);
   border-bottom: 0.06rem solid rgba(0, 0, 0, 0.08);
 }
 
-/* LOGO */
 .nav-logo h1 {
   font-size: 2.25rem;
   letter-spacing: 0.25rem;
@@ -106,7 +91,6 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Center Menu */
 .nav-menu {
   display: flex;
   justify-content: center;
@@ -116,22 +100,19 @@ body {
 .nav-menu a {
   text-decoration: none;
   letter-spacing: 0.08rem;
-  font-size: 1.05rem;     
-  font-weight: 500;       
+  font-size: 1.05rem;
+  font-weight: 500;
   transition: 0.3s ease;
   color: #000;
 }
 
-.nav-menu a:hover {
-  opacity: 0.65;
-}
-/* Transparent mode on top of hero */
+.nav-menu a:hover { opacity: 0.65; }
+
 .navbar:not(.navbar-scrolled) .nav-logo h1,
 .navbar:not(.navbar-scrolled) .nav-menu a {
   color: white;
 }
 
-/* On hover over transparent navbar → white bg */
 .navbar:not(.navbar-scrolled):hover {
   background: rgba(255, 255, 255, 0.95);
 }
@@ -141,35 +122,20 @@ body {
   color: black;
 }
 
-/* RESPONSIVE NAVBAR */
 @media (max-width: 48rem) {
-  .navbar {
-    padding: 1.5rem 1rem;
-  }
-  .nav-logo h1 {
-    font-size: 1.75rem;
-  }
-  .nav-menu {
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .nav-menu a {
-    font-size: 0.875rem;
-  }
+  .navbar { padding: 1.5rem 1rem; }
+  .nav-logo h1 { font-size: 1.75rem; }
+  .nav-menu { gap: 1.5rem; flex-wrap: wrap; }
+  .nav-menu a { font-size: 0.875rem; }
 }
 
 @media (max-width: 36rem) {
-  .nav-menu {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .navbar {
-    padding: 1rem 0.5rem;
-  }
+  .nav-menu { flex-direction: column; gap: 1rem; }
+  .navbar { padding: 1rem 0.5rem; }
 }
 
 /* =========================================
-   FOUNDER SECTION (LUXURY STYLE)
+   FOUNDER SECTION
 ========================================= */
 
 .founder-section {
@@ -187,9 +153,7 @@ body {
 }
 
 @media (min-width: 62.5rem) {
-  .founder-container {
-    grid-template-columns: 1fr 1fr;
-  }
+  .founder-container { grid-template-columns: 1fr 1fr; }
 }
 
 .founder-left {
@@ -226,7 +190,6 @@ body {
   font-size: 1.15rem;
   line-height: 1.9;
   color: #1a1a1a;
-  max-width: auto;
   margin: 0 auto 0.9rem;
   font-weight: 400;
 }
@@ -246,66 +209,49 @@ body {
 
 .founder-image {
   width: 100%;
-  height: auto;
-  object-fit: cover;
   height: 100vh;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-/* RESPONSIVE FOUNDER */
 @media (max-width: 48rem) {
-  .founder-section {
-    padding: 5rem 1rem;
-  }
-  .founder-title {
-    font-size: 2.5rem;
-  }
-  .founder-text {
-    font-size: 1.1rem;
-  }
-  .founder-image {
-    height: 60vh;
-  }
-  .founder-left {
-    padding-right: 0;
-  }
+  .founder-section { padding: 5rem 1rem; }
+  .founder-title { font-size: 2.5rem; }
+  .founder-text { font-size: 1.1rem; }
+  .founder-image { height: 60vh; }
+  .founder-left { padding-right: 0; }
 }
 
 @media (max-width: 36rem) {
-  .founder-title {
-    font-size: 2rem;
-  }
-  .founder-text {
-    font-size: 1rem;
-  }
-  .founder-image {
-    height: 50vh;
-  }
+  .founder-title { font-size: 2rem; }
+  .founder-text { font-size: 1rem; }
+  .founder-image { height: 50vh; }
 }
 
 /* ==============================
-   PREMIUM DOUBLE-BACKGROUND FOOTER
+   FOOTER
 ============================== */
 
-/* OUTER BACKGROUND */
 .footer-outer {
-  background: #000000;
-  padding: 4rem 2rem;
+  background: #000;
+  margin: 10px;
+  border: 20px solid #000;
+  border-radius: 12px;
 }
 
-/* INNER FOOTER CARD */
 .footer-wrapper {
   background: transparent;
-  min-height: auto;                /* removed 75vh */
-  padding: 8rem 4rem 6em;         /* reduced spacing */
+  min-height: auto;
+  padding: 8rem 4rem 6rem;
   border-radius: 28px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   font-family: "Cormorant Garamond", serif;
   color: whitesmoke;
+  border: 1px solid rgba(214, 208, 208, 0.08);
 }
 
-/* FOOTER GRID */
 .footer-columns {
   max-width: 97.25rem;
   margin: 0 auto;
@@ -313,10 +259,9 @@ body {
   grid-template-columns: 4fr 1fr 1fr 1fr 1fr 3fr;
   gap: 3rem;
   margin-top: 2rem;
-  margin-bottom: 5rem;   /* reduced from 8rem */
+  margin-bottom: 5rem;
 }
 
-/* LEFT ABOUT COLUMN */
 .footer-title {
   font-size: 1.8rem;
   font-weight: 400;
@@ -334,7 +279,6 @@ body {
   letter-spacing: 0.02rem;
 }
 
-/* RIGHT COLUMNS */
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -358,11 +302,8 @@ body {
   font-family: "Optima", sans-serif;
 }
 
-.footer-col a:hover {
-  color: #ffffff;   /* fixed hover */
-}
+.footer-col a:hover { color: #ffffff; }
 
-/* SOCIAL ICONS */
 .footer-socials {
   display: flex;
   gap: 16px;
@@ -371,7 +312,7 @@ body {
 
 .social-icon {
   font-size: 20px;
-  color: rgba(255,255,255,0.6);   /* fixed visibility */
+  color: rgba(255,255,255,0.6);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -379,9 +320,8 @@ body {
   color: #ffffff;
   transform: translateY(-2px);
 }
-.footer-newsletter {
-  max-width: 260px;
-}
+
+.footer-newsletter { max-width: 260px; }
 
 .newsletter-text {
   font-size: 0.85rem;
@@ -416,21 +356,16 @@ body {
   transition: 0.3s;
 }
 
-.newsletter-btn:hover {
-  opacity: 0.8;
-}
+.newsletter-btn:hover { opacity: 0.8; }
 
-FRAME IMAGE
 .footer-frame {
   display: block;
   margin: 0 auto 0.7rem auto;
   max-width: 450px;
   width: 100%;
-  opacity: 0.28;   /* elegant watermark look */
+  opacity: 0.28;
 }
 
-
-/* COPYRIGHT */
 .copyright {
   margin-top: 7rem;
   padding-top: 1rem;
@@ -442,71 +377,34 @@ FRAME IMAGE
   font-family: "Optima", sans-serif;
 }
 
-/* MOBILE */
 @media (max-width: 56.25rem) {
-  .footer-wrapper {
-    padding: 4rem 2rem 3rem;
-    border-radius: 18px;
-  }
-
-  .footer-columns {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  .footer-title {
-    font-size: 1.6rem;
-  }
+  .footer-wrapper { padding: 4rem 2rem 3rem; border-radius: 18px; }
+  .footer-columns { grid-template-columns: 1fr; gap: 3rem; margin-bottom: 2rem; }
+  .footer-title { font-size: 1.6rem; }
 }
 
 @media (max-width: 36rem) {
-  .footer-outer {
-    padding: 2rem 1rem;
-  }
-
-  .footer-wrapper {
-    padding: 3rem 1.5rem 2rem;
-    border-radius: 12px;
-  }
-
-  .footer-columns {
-    gap: 2rem;
-  }
-
-  .footer-title {
-    font-size: 1.4rem;
-  }
-
-  .footer-description {
-    font-size: 0.85rem;
-  }
-
-  .footer-heading {
-    font-size: 0.8rem;
-  }
-
-  .footer-col a {
-    font-size: 0.85rem;
-  }
-
-  .copyright {
-    font-size: 0.8rem;
-  }
-
-  .footer-frame {
-    max-width: 300px;
-  }
+  .footer-outer { padding: 2rem 1rem; }
+  .footer-wrapper { padding: 3rem 1.5rem 2rem; border-radius: 12px; }
+  .footer-columns { gap: 2rem; }
+  .footer-title { font-size: 1.4rem; }
+  .footer-description { font-size: 0.85rem; }
+  .footer-heading { font-size: 0.8rem; }
+  .footer-col a { font-size: 0.85rem; }
+  .copyright { font-size: 0.8rem; }
+  .footer-frame { max-width: 300px; }
 }
 
-/* CATEGORY BANNERS*/
+/* ==============================
+   CATEGORY BANNERS
+============================== */
+
 .category-section {
   width: 100%;
   position: relative;
   margin-bottom: 3.12rem;
 }
 
-/* Full-screen image section */
 .category-image-overlay {
   width: 100%;
   height: 100vh;
@@ -514,7 +412,6 @@ FRAME IMAGE
   overflow: hidden;
 }
 
-/* Background image */
 .category-image {
   width: 100%;
   height: 100%;
@@ -522,7 +419,6 @@ FRAME IMAGE
   transition: 0.4s ease;
 }
 
-/* BOTTOM-ALIGNED content */
 .category-content-overlay {
   position: absolute;
   bottom: 5rem;
@@ -533,7 +429,6 @@ FRAME IMAGE
   z-index: 10;
 }
 
-/* Title styling */
 .category-content-overlay h2 {
   font-size: 2.62rem;
   font-weight: 500;
@@ -543,7 +438,6 @@ FRAME IMAGE
   margin-bottom: 1.25rem;
 }
 
-/* White border button */
 .category-button-overlay {
   display: inline-block;
   padding: 0.75rem 2.5rem;
@@ -555,51 +449,31 @@ FRAME IMAGE
   transition: 0.3s ease;
 }
 
-.category-button-overlay:hover {
-  background: white;
-  color: black;
-}
+.category-button-overlay:hover { background: white; color: black; }
 
-/* RESPONSIVE CATEGORY BANNERS */
 @media (max-width: 48rem) {
-  .category-content-overlay {
-    bottom: 3rem;
-  }
-  .category-content-overlay h2 {
-    font-size: 2rem;
-  }
-  .category-button-overlay {
-    padding: 0.6rem 2rem;
-    font-size: 1rem;
-  }
-  .category-image-overlay {
-    height: 80vh;
-  }
+  .category-content-overlay { bottom: 3rem; }
+  .category-content-overlay h2 { font-size: 2rem; }
+  .category-button-overlay { padding: 0.6rem 2rem; font-size: 1rem; }
+  .category-image-overlay { height: 80vh; }
 }
 
 @media (max-width: 36rem) {
-  .category-content-overlay {
-    bottom: 2rem;
-  }
-  .category-content-overlay h2 {
-    font-size: 1.5rem;
-  }
-  .category-button-overlay {
-    padding: 0.5rem 1.5rem;
-    font-size: 0.875rem;
-  }
-  .category-image-overlay {
-    height: 70vh;
-  }
+  .category-content-overlay { bottom: 2rem; }
+  .category-content-overlay h2 { font-size: 1.5rem; }
+  .category-button-overlay { padding: 0.5rem 1.5rem; font-size: 0.875rem; }
+  .category-image-overlay { height: 70vh; }
 }
 
-/* CATEGORY PAGE STYLING */
+/* ==============================
+   CATEGORY PAGE
+============================== */
+
 .category-page {
   padding-top: 7.5rem;
   font-family: "Cormorant Garamond", serif;
 }
 
-/* HERO BANNER */
 .category-hero {
   width: 100%;
   height: 75vh;
@@ -607,11 +481,7 @@ FRAME IMAGE
   overflow: hidden;
 }
 
-.category-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.category-hero img { width: 100%; height: 100%; object-fit: cover; }
 
 .category-hero-title {
   position: absolute;
@@ -626,7 +496,6 @@ FRAME IMAGE
   font-weight: 500;
 }
 
-/* ABOUT SECTION */
 .category-about {
   max-width: 56.25rem;
   text-align: center;
@@ -636,7 +505,6 @@ FRAME IMAGE
   color: #444;
 }
 
-/* PRODUCT GRID */
 .category-grid {
   max-width: 75rem;
   margin: 3.75rem auto;
@@ -645,10 +513,7 @@ FRAME IMAGE
   gap: 1.88rem;
 }
 
-.category-card {
-  position: relative;
-  overflow: hidden;
-}
+.category-card { position: relative; overflow: hidden; }
 
 .category-card img {
   width: 100%;
@@ -657,22 +522,10 @@ FRAME IMAGE
   transition: 0.3s ease;
 }
 
-.category-card:hover img {
-  transform: scale(1.05);
-}
+.category-card:hover img { transform: scale(1.05); }
+.category-card-title { margin-top: 0.75rem; font-size: 1.25rem; font-weight: 500; }
 
-.category-card-title {
-  margin-top: 0.75rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-/* SIGNATURE SECTION */
-.category-highlight {
-  max-width: 75rem;
-  margin: 5rem auto;
-  text-align: center;
-}
+.category-highlight { max-width: 75rem; margin: 5rem auto; text-align: center; }
 
 .category-highlight img {
   width: 100%;
@@ -681,27 +534,12 @@ FRAME IMAGE
   border-radius: 0.38rem;
 }
 
-.category-highlight h3 {
-  margin-top: 1.25rem;
-  font-size: 2rem;
-}
+.category-highlight h3 { margin-top: 1.25rem; font-size: 2rem; }
 
-/* WHY CHOOSE */
-.category-points {
-  max-width: 50rem;
-  margin: 3.75rem auto;
-}
+.category-points { max-width: 50rem; margin: 3.75rem auto; }
+.category-points li { font-size: 1.25rem; margin: 0.62rem 0; }
 
-.category-points li {
-  font-size: 1.25rem;
-  margin: 0.62rem 0;
-}
-
-/* CTA */
-.category-cta {
-  text-align: center;
-  margin: 6.25rem 0;
-}
+.category-cta { text-align: center; margin: 6.25rem 0; }
 
 .category-cta a {
   padding: 0.75rem 2.5rem;
@@ -711,99 +549,40 @@ FRAME IMAGE
   color: black;
 }
 
-.category-cta a:hover {
-  background: black;
-  color: white;
-}
+.category-cta a:hover { background: black; color: white; }
 
-/* RESPONSIVE CATEGORY PAGE */
 @media (max-width: 48rem) {
-  .category-page {
-    padding-top: 5rem;
-  }
-  .category-hero {
-    height: 60vh;
-  }
-  .category-hero-title {
-    font-size: 2.25rem;
-    bottom: 1.5rem;
-  }
-  .category-about {
-    font-size: 1.1rem;
-    margin: 2.5rem auto;
-    padding: 0 1rem;
-  }
-  .category-grid {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 1.25rem;
-    padding: 0 1rem;
-  }
-  .category-card img {
-    height: 20rem;
-  }
-  .category-card-title {
-    font-size: 1.1rem;
-  }
-  .category-highlight img {
-    height: 25rem;
-  }
-  .category-highlight h3 {
-    font-size: 1.75rem;
-  }
-  .category-points {
-    padding: 0 1rem;
-  }
-  .category-points li {
-    font-size: 1.1rem;
-  }
-  .category-cta {
-    margin: 4rem 0;
-  }
-  .category-cta a {
-    padding: 0.6rem 2rem;
-    font-size: 1rem;
-  }
+  .category-page { padding-top: 5rem; }
+  .category-hero { height: 60vh; }
+  .category-hero-title { font-size: 2.25rem; bottom: 1.5rem; }
+  .category-about { font-size: 1.1rem; margin: 2.5rem auto; padding: 0 1rem; }
+  .category-grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.25rem; padding: 0 1rem; }
+  .category-card img { height: 20rem; }
+  .category-card-title { font-size: 1.1rem; }
+  .category-highlight img { height: 25rem; }
+  .category-highlight h3 { font-size: 1.75rem; }
+  .category-points { padding: 0 1rem; }
+  .category-points li { font-size: 1.1rem; }
+  .category-cta { margin: 4rem 0; }
+  .category-cta a { padding: 0.6rem 2rem; font-size: 1rem; }
 }
 
 @media (max-width: 36rem) {
-  .category-hero {
-    height: 50vh;
-  }
-  .category-hero-title {
-    font-size: 1.75rem;
-    bottom: 1rem;
-  }
-  .category-about {
-    font-size: 1rem;
-  }
-  .category-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .category-card img {
-    height: 18rem;
-  }
-  .category-card-title {
-    font-size: 1rem;
-  }
-  .category-highlight img {
-    height: 20rem;
-  }
-  .category-highlight h3 {
-    font-size: 1.5rem;
-  }
-  .category-points li {
-    font-size: 1rem;
-  }
-  .category-cta a {
-    padding: 0.5rem 1.5rem;
-    font-size: 0.875rem;
-  }
+  .category-hero { height: 50vh; }
+  .category-hero-title { font-size: 1.75rem; bottom: 1rem; }
+  .category-about { font-size: 1rem; }
+  .category-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .category-card img { height: 18rem; }
+  .category-card-title { font-size: 1rem; }
+  .category-highlight img { height: 20rem; }
+  .category-highlight h3 { font-size: 1.5rem; }
+  .category-points li { font-size: 1rem; }
+  .category-cta a { padding: 0.5rem 1.5rem; font-size: 0.875rem; }
 }
 
-/* ==========================
+/* ==============================
    QUOTE SECTION
-========================== */
+============================== */
 
 .quote-section {
   width: 100%;
@@ -823,41 +602,23 @@ FRAME IMAGE
   font-weight: 500;
 }
 
-.quote-logo {
-  margin-top: 1.56rem;
-}
+.quote-logo { margin-top: 1.56rem; }
+.quote-logo img { opacity: 0.9; transition: 0.2s ease; }
+.quote-logo img:hover { opacity: 1; }
 
-.quote-logo img {
-  opacity: 0.9;
-  transition: 0.2s ease;
-}
-
-.quote-logo img:hover {
-  opacity: 1;
-}
-
-/* RESPONSIVE QUOTE */
 @media (max-width: 48rem) {
-  .quote-section {
-    padding: 3rem 1rem;
-    margin-top: -6rem;
-  }
-  .quote-text {
-    font-size: 1rem;
-  }
+  .quote-section { padding: 3rem 1rem; margin-top: -6rem; }
+  .quote-text { font-size: 1rem; }
 }
 
 @media (max-width: 36rem) {
-  .quote-section {
-    padding: 2rem 0.5rem;
-    margin-top: -4rem;
-  }
-  .quote-text {
-    font-size: 0.875rem;
-  }
+  .quote-section { padding: 2rem 0.5rem; margin-top: -4rem; }
+  .quote-text { font-size: 0.875rem; }
 }
 
-/* 10 YEARS PAGE */
+/* ==============================
+   10 YEARS PAGE
+============================== */
 
 .tenpk-container {
   padding: 7.5rem 1.25rem;
@@ -872,11 +633,7 @@ FRAME IMAGE
   margin-bottom: 0.62rem;
 }
 
-.tenpk-subtitle {
-  font-size: 1.12rem;
-  color: #555;
-  margin-bottom: 3.12rem;
-}
+.tenpk-subtitle { font-size: 1.12rem; color: #555; margin-bottom: 3.12rem; }
 
 .tenpk-grid {
   display: grid;
@@ -886,167 +643,338 @@ FRAME IMAGE
   margin: auto;
 }
 
-.tenpk-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-}
+.tenpk-item img { width: 100%; height: auto; border-radius: 0.5rem; }
 
-/* RESPONSIVE 10 YEARS */
 @media (max-width: 48rem) {
-  .tenpk-container {
-    padding: 5rem 1rem;
-  }
-  .tenpk-title {
-    font-size: 2.5rem;
-  }
-  .tenpk-subtitle {
-    font-size: 1rem;
-  }
-  .tenpk-grid {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 1.5rem;
-  }
+  .tenpk-container { padding: 5rem 1rem; }
+  .tenpk-title { font-size: 2.5rem; }
+  .tenpk-subtitle { font-size: 1rem; }
+  .tenpk-grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; }
 }
 
 @media (max-width: 36rem) {
-  .tenpk-title {
-    font-size: 2rem;
-  }
-  .tenpk-subtitle {
-    font-size: 0.875rem;
-  }
-  .tenpk-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  .tenpk-title { font-size: 2rem; }
+  .tenpk-subtitle { font-size: 0.875rem; }
+  .tenpk-grid { grid-template-columns: 1fr; gap: 1rem; }
 }
 
-/* BOOK A CONSULT PAGE - WITH BACKGROUND IMAGE */
 
-.consult-container {
-  width: 100%;
-  min-height: auto;
-  padding: 11.25rem 1.25rem 7.5rem;
-  text-align: center;
+/* ── BASE (applies to all, overridden below) ── */
+.consult-section {
   position: relative;
-  color: white;
-  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("/Banner.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  backdrop-filter: blur(0.06rem);
+  width: calc(100% - 4rem);
+  max-width: 1000px;
+  min-height: 560px;
+  margin: 4rem auto;
+  background: #000000 ;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.consult-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.consult-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 680px;
+  width: 100%;
 }
 
 .consult-sub {
-  font-size: 0.88rem;
-  letter-spacing: 0.19rem;
-  margin-bottom: 0.62rem;
-  opacity: 0.85;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.50rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
 }
-
+ 
 .consult-title {
-  font-size: 2.25rem;
   font-family: "Cormorant Garamond", serif;
-  margin-bottom: 0.62rem;
-  font-weight: 500 !important;
-  letter-spacing: 1;
-  margin-bottom: 1.88rem;
-  color: rgb(218, 218, 218);
+  font-size: clamp(1.6rem, 3vw, 2.6rem) !important;
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  letter-spacing: -0.01em;
 }
-
-.consult-line {
-  width: 5rem;
-  height: 0.12rem;
-  background: #000000;
-  margin: 0.94rem auto 1.56rem;
+ 
+.consult-title em {
+  font-style: normal;
+  font-size: 2.6rem;
+  color: rgba(255, 255, 255, 0.6);
 }
-
+ 
 .consult-text {
-  font-size: 1.12rem;
-  line-height: 1.7;
-  max-width: 46.88rem;
-  margin: auto;
-  opacity: 0.9;
-}
-
-.consult-btn {
-  margin-top: 2.5rem;
-  padding: 0.75rem 2.5rem;
-  background: transparent;
-  border: 0.06rem solid rgb(218, 218, 218);
-  font-size: 1.12rem;
-  cursor: pointer;
-  color: rgb(218, 218, 218);
-  transition: 0.3s ease;
   font-family: "Cormorant Garamond", serif;
-  letter-spacing: 0.06rem;
+  font-size: 0.82rem;                          
+  line-height: 1.85;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+}
+.consult-btn {
+  padding: 0.78rem 2.6rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: background 0.35s ease, color 0.35s ease,
+    border-color 0.35s ease, transform 0.25s ease;
 }
 
 .consult-btn:hover {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background: white;
+  color: #000;
+  border-color: white;
+  transform: translateY(-2px);
 }
 
-/* RESPONSIVE CONSULT */
-@media (max-width: 48rem) {
-  .consult-container {
-    padding: 8rem 1rem 5rem;
-  }
-  .consult-title {
-    font-size: 1.75rem;
-  }
-  .consult-text {
-    font-size: 1rem;
-  }
-  .consult-btn {
-    padding: 0.6rem 2rem;
-    font-size: 1rem;
-  }
-}
 
-@media (max-width: 36rem) {
-  .consult-container {
-    padding: 6rem 0.5rem 4rem;
+/* ==============================
+   xs — Small phones (up to 480px)
+============================== */
+@media (max-width: 30rem) {
+  .consult-section {
+    width: calc(100% - 1.25rem);
+    min-height: 320px;
+    margin: 1rem auto;
+    border-radius: 12px;
+  }
+  .consult-content {
+    padding: 2rem 1rem;
+    max-width: 100%;
   }
   .consult-sub {
-    font-size: 0.75rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 0.9rem;
   }
   .consult-title {
-    font-size: 1.5rem;
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+    margin-bottom: 1rem;
   }
   .consult-text {
-    font-size: 0.875rem;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    max-width: 280px;
+    margin-bottom: 1.5rem;
   }
   .consult-btn {
-    padding: 0.5rem 1.5rem;
-    font-size: 0.875rem;
+    padding: 0.55rem 1.5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
   }
 }
 
-/* ===============================
-   GENERAL PAGE
-=============================== */
-.couture-page {
-  font-family: "Cormorant Garamond", serif;
-  color: #222;
+
+/* ==============================
+   sm — Phones / large phones (481px – 768px)
+============================== */
+@media (min-width: 30.0625rem) and (max-width: 48rem) {
+  .consult-section {
+    width: calc(100% - 2rem);
+    min-height: 400px;
+    margin: 2rem auto;
+    border-radius: 16px;
+  }
+  .consult-content {
+    padding: 2.5rem 1.5rem;
+    max-width: 100%;
+  }
+  .consult-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 1.1rem;
+  }
+  .consult-title {
+    font-size: clamp(1.9rem, 7vw, 2.8rem);
+    margin-bottom: 1.2rem;
+  }
+  .consult-text {
+    font-size: 0.9rem;
+    max-width: 360px;
+    margin-bottom: 1.8rem;
+  }
+  .consult-btn {
+    padding: 0.65rem 2rem;
+    font-size: 0.9rem;
+  }
 }
 
-/* ===============================
-   1. HERO SECTION
-=============================== */
-.couture-hero {
-  position: relative;
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
+
+/* ==============================
+   md — Tablets (769px – 1024px)
+============================== */
+@media (min-width: 48.0625rem) and (max-width: 64rem) {
+  .consult-section {
+    width: calc(100% - 3rem);
+    min-height: 480px;
+    margin: 3rem auto;
+    border-radius: 20px;
+  }
+  .consult-content {
+    padding: 3.5rem 2rem;
+    max-width: 580px;
+  }
+  .consult-sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.36em;
+    margin-bottom: 1.3rem;
+  }
+  .consult-title {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin-bottom: 1.5rem;
+  }
+  .consult-text {
+    font-size: 0.98rem;
+    max-width: 440px;
+    margin-bottom: 2rem;
+  }
+  .consult-btn {
+    padding: 0.72rem 2.2rem;
+    font-size: 0.95rem;
+  }
 }
 
-.couture-hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+/* ==============================
+   lg — Laptops (1025px – 1280px)
+============================== */
+@media (min-width: 64.0625rem) and (max-width: 80rem) {
+  .consult-section {
+    width: calc(100% - 4rem);
+    max-width: 960px;
+    min-height: 520px;
+    margin: 4rem auto;
+    border-radius: 22px;
+  }
+  .consult-content {
+    padding: 4rem 2rem;
+    max-width: 640px;
+  }
+  .consult-sub {
+    font-size: 0.76rem;
+    letter-spacing: 0.4em;
+    margin-bottom: 1.4rem;
+  }
+  .consult-title {
+    font-size: clamp(2.6rem, 4vw, 3.6rem);
+    margin-bottom: 1.6rem;
+  }
+  .consult-text {
+    font-size: 1rem;
+    max-width: 480px;
+    margin-bottom: 2rem;
+  }
+  .consult-btn {
+    padding: 0.75rem 2.4rem;
+    font-size: 0.98rem;
+  }
 }
+
+
+/* ==============================
+   xl — Desktops (1281px – 1536px)
+============================== */
+@media (min-width: 80.0625rem) and (max-width: 96rem) {
+  .consult-section {
+    width: calc(100% - 5rem);
+    max-width: 1100px;
+    min-height: 580px;
+    margin: 5rem auto;
+    border-radius: 26px;
+  }
+  .consult-content {
+    padding: 4.5rem 2rem;
+    max-width: 700px;
+  }
+  .consult-sub {
+    font-size: 0.8rem;
+    letter-spacing: 0.44em;
+    margin-bottom: 1.5rem;
+  }
+  .consult-title {
+    font-size: clamp(3rem, 4vw, 4.2rem);
+    margin-bottom: 1.8rem;
+  }
+  .consult-text {
+    font-size: 1.08rem;
+    max-width: 540px;
+    margin-bottom: 2.2rem;
+  }
+  .consult-btn {
+    padding: 0.82rem 2.8rem;
+    font-size: 1.02rem;
+  }
+}
+
+
+/* ==============================
+   2xl — Large / wide screens (1537px+)
+============================== */
+@media (min-width: 96.0625rem) {
+  .consult-section {
+    width: calc(100% - 8rem);
+    max-width: 1300px;
+    min-height: 640px;
+    margin: 6rem auto;
+    border-radius: 30px;
+  }
+  .consult-content {
+    padding: 5rem 2rem;
+    max-width: 780px;
+  }
+  .consult-sub {
+    font-size: 0.85rem;
+    letter-spacing: 0.48em;
+    margin-bottom: 1.6rem;
+  }
+  .consult-title {
+    font-size: clamp(3.4rem, 3.5vw, 5rem);
+    margin-bottom: 2rem;
+  }
+  .consult-text {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+  .consult-btn {
+    padding: 0.9rem 3.2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+  }
+}
+/* ==============================
+   COUTURE / GENERAL PAGE
+============================== */
+
+.couture-page { font-family: "Cormorant Garamond", serif; color: #222; }
+
+.couture-hero { position: relative; width: 100%; height: 85vh; overflow: hidden; }
+.couture-hero-img { width: 100%; height: 100%; object-fit: cover; }
 
 .couture-hero-content {
   position: absolute;
@@ -1057,17 +985,8 @@ FRAME IMAGE
   color: white;
 }
 
-.couture-hero-content h1 {
-  font-size: 3rem;
-  letter-spacing: 0.12rem;
-  margin-bottom: 0.62rem;
-}
-
-.couture-hero-content p {
-  font-size: 1.12rem;
-  margin-bottom: 1.25rem;
-  opacity: 0.9;
-}
+.couture-hero-content h1 { font-size: 3rem; letter-spacing: 0.12rem; margin-bottom: 0.62rem; }
+.couture-hero-content p { font-size: 1.12rem; margin-bottom: 1.25rem; opacity: 0.9; }
 
 .couture-button {
   text-decoration: none;
@@ -1078,35 +997,12 @@ FRAME IMAGE
   transition: 0.3s;
 }
 
-.couture-button:hover {
-  background: white;
-  color: black;
-}
+.couture-button:hover { background: white; color: black; }
 
-/* ===============================
-   2. ABOUT COUTURE
-=============================== */
-.couture-about {
-  max-width: 56.25rem;
-  margin: 6.25rem auto;
-  text-align: center;
-  padding: 0 1.25rem;
-}
+.couture-about { max-width: 56.25rem; margin: 6.25rem auto; text-align: center; padding: 0 1.25rem; }
+.couture-about h2 { font-size: 2.25rem; margin-bottom: 1.12rem; }
+.couture-about p { font-size: 1.12rem; line-height: 1.7; opacity: 0.85; }
 
-.couture-about h2 {
-  font-size: 2.25rem;
-  margin-bottom: 1.12rem;
-}
-
-.couture-about p {
-  font-size: 1.12rem;
-  line-height: 1.7;
-  opacity: 0.85;
-}
-
-/* ===============================
-   3. CATEGORIES GRID
-=============================== */
 .couture-categories {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
@@ -1122,42 +1018,16 @@ FRAME IMAGE
   object-fit: cover;
   object-position: top;
   transition: transform 0.4s ease;
+  border-radius: 6px;
 }
 
-.couture-category-card:hover img {
-  transform: scale(1.03);
-}
+.couture-category-card:hover img { transform: scale(1.03); }
+.couture-category-card h3 { font-size: 1.38rem; margin-top: 0.75rem; }
+.couture-category-card p { font-size: 1rem; opacity: 0.7; }
 
-.couture-category-card h3 {
-  font-size: 1.38rem;
-  margin-top: 0.75rem;
-}
-
-.couture-category-card p {
-  font-size: 1rem;
-  opacity: 0.7;
-}
-
-/* ===============================
-   4. FEATURED GALLERY
-=============================== */
-.couture-featured {
-  text-align: center;
-  max-width: 75rem;
-  margin: 7.5rem auto;
-  padding: 0 1.25rem;
-}
-
-.couture-featured h2 {
-  font-size: 2.25rem;
-  margin-bottom: 0.62rem;
-}
-
-.couture-featured p {
-  font-size: 1.06rem;
-  opacity: 0.75;
-  margin-bottom: 2.5rem;
-}
+.couture-featured { text-align: center; max-width: 75rem; margin: 7.5rem auto; padding: 0 1.25rem; }
+.couture-featured h2 { font-size: 2.25rem; margin-bottom: 0.62rem; }
+.couture-featured p { font-size: 1.06rem; opacity: 0.75; margin-bottom: 2.5rem; }
 
 .featured-grid {
   display: grid;
@@ -1165,15 +1035,8 @@ FRAME IMAGE
   grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
 }
 
-.featured-grid img {
-  width: 100%;
-  height: 22.5rem;
-  object-fit: cover;
-}
+.featured-grid img { width: 100%; height: 22.5rem; object-fit: cover; border-radius: 6px;}
 
-/* ===============================
-   5. CRAFTSMANSHIP
-=============================== */
 .couture-craft {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1183,42 +1046,14 @@ FRAME IMAGE
   padding: 0 1.25rem;
 }
 
-.craft-text h2 {
-  font-size: 2.12rem;
-  margin-bottom: 1.25rem;
-}
+.craft-text h2 { font-size: 2.12rem; margin-bottom: 1.25rem; }
+.craft-text p { line-height: 1.7; opacity: 0.75; }
+.craft-img { width: 100%; object-fit: cover; height: 28.12rem; border-radius: 6px; }
 
-.craft-text p {
-  line-height: 1.7;
-  opacity: 0.75;
-}
+@media (max-width: 53.12rem) { .couture-craft { grid-template-columns: 1fr; } }
 
-.craft-img {
-  width: 100%;
-  object-fit: cover;
-  height: 28.12rem;
-  border-radius: 0.25rem;
-}
-
-@media (max-width: 53.12rem) {
-  .couture-craft {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ===============================
-   6. TESTIMONIALS
-=============================== */
-.couture-testimonials {
-  text-align: center;
-  padding: 0 1.25rem;
-  margin-bottom: 7.5rem;
-}
-
-.couture-testimonials h2 {
-  font-size: 2.12rem;
-  margin-bottom: 2.5rem;
-}
+.couture-testimonials { text-align: center; padding: 0 1.25rem; margin-bottom: 7.5rem; }
+.couture-testimonials h2 { font-size: 2.12rem; margin-bottom: 2.5rem; }
 
 .testimonials-grid {
   display: grid;
@@ -1228,205 +1063,66 @@ FRAME IMAGE
   grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
 }
 
-.testimonial-card img {
-  width: 100%;
-  height: 18.75rem;
-  object-fit: cover;
-}
+.testimonial-card img { width: 100%; height: 18.75rem; object-fit: cover; }
+.testimonial-card p { margin-top: 0.75rem; font-size: 1rem; opacity: 0.8; }
 
-.testimonial-card p {
-  margin-top: 0.75rem;
-  font-size: 1rem;
-  opacity: 0.8;
-}
+.couture-cta { text-align: center; margin: 7.5rem 0; }
+.couture-cta h2 { font-size: 2rem; margin-bottom: 1.25rem; }
+.couture-cta .couture-button { border-color: black; color: black; }
+.couture-cta .couture-button:hover { background: black; color: white; }
 
-/* ===============================
-   7. CTA
-=============================== */
-.couture-cta {
-  text-align: center;
-  margin: 7.5rem 0;
-}
-
-.couture-cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-.couture-cta .couture-button {
-  border-color: black;
-  color: black;
-}
-
-.couture-cta .couture-button:hover {
-  background: black;
-  color: white;
-}
-
-/* RESPONSIVE COUTURE PAGE */
 @media (max-width: 48rem) {
-  .couture-hero {
-    height: 70vh;
-  }
-  .couture-hero-content h1 {
-    font-size: 2.25rem;
-  }
-  .couture-hero-content p {
-    font-size: 1rem;
-  }
-  .couture-button {
-    padding: 0.5rem 1.5rem;
-  }
-  .couture-about {
-    margin: 4rem auto;
-    padding: 0 1rem;
-  }
-  .couture-about h2 {
-    font-size: 1.75rem;
-  }
-  .couture-about p {
-    font-size: 1rem;
-  }
-  .couture-categories {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-  .couture-category-card img {
-    height: 22rem;
-  }
-  .couture-category-card h3 {
-    font-size: 1.25rem;
-  }
-  .couture-category-card p {
-    font-size: 0.875rem;
-  }
-  .couture-featured {
-    margin: 5rem auto;
-    padding: 0 1rem;
-  }
-  .couture-featured h2 {
-    font-size: 1.75rem;
-  }
-  .couture-featured p {
-    font-size: 1rem;
-  }
-  .featured-grid {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 1rem;
-  }
-  .featured-grid img {
-    height: 18rem;
-  }
-  .couture-craft {
-    margin: 6rem auto;
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-  .craft-text h2 {
-    font-size: 1.75rem;
-  }
-  .craft-text p {
-    font-size: 1rem;
-  }
-  .craft-img {
-    height: 22rem;
-  }
-  .couture-testimonials {
-    margin-bottom: 5rem;
-    padding: 0 1rem;
-  }
-  .couture-testimonials h2 {
-    font-size: 1.75rem;
-  }
-  .testimonials-grid {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 1.5rem;
-  }
-  .testimonial-card img {
-    height: 15rem;
-  }
-  .testimonial-card p {
-    font-size: 0.875rem;
-  }
-  .couture-cta {
-    margin: 5rem 0;
-  }
-  .couture-cta h2 {
-    font-size: 1.75rem;
-  }
+  .couture-hero { height: 70vh; }
+  .couture-hero-content h1 { font-size: 2.25rem; }
+  .couture-hero-content p { font-size: 1rem; }
+  .couture-button { padding: 0.5rem 1.5rem; }
+  .couture-about { margin: 4rem auto; padding: 0 1rem; }
+  .couture-about h2 { font-size: 1.75rem; }
+  .couture-about p { font-size: 1rem; }
+  .couture-categories { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; padding: 0 1rem; }
+  .couture-category-card img { height: 22rem; }
+  .couture-category-card h3 { font-size: 1.25rem; }
+  .couture-category-card p { font-size: 0.875rem; }
+  .couture-featured { margin: 5rem auto; padding: 0 1rem; }
+  .couture-featured h2 { font-size: 1.75rem; }
+  .couture-featured p { font-size: 1rem; }
+  .featured-grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+  .featured-grid img { height: 18rem; }
+  .couture-craft { margin: 6rem auto; gap: 1.5rem; padding: 0 1rem; }
+  .craft-text h2 { font-size: 1.75rem; }
+  .craft-text p { font-size: 1rem; }
+  .craft-img { height: 22rem; }
+  .couture-testimonials { margin-bottom: 5rem; padding: 0 1rem; }
+  .couture-testimonials h2 { font-size: 1.75rem; }
+  .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; }
+  .testimonial-card img { height: 15rem; }
+  .testimonial-card p { font-size: 0.875rem; }
+  .couture-cta { margin: 5rem 0; }
+  .couture-cta h2 { font-size: 1.75rem; }
 }
 
 @media (max-width: 36rem) {
-  .couture-hero {
-    height: 60vh;
-  }
-  .couture-hero-content {
-    bottom: 8%;
-  }
-  .couture-hero-content h1 {
-    font-size: 1.75rem;
-  }
-  .couture-hero-content p {
-    font-size: 0.875rem;
-  }
-  .couture-button {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.875rem;
-  }
-  .couture-about h2 {
-    font-size: 1.5rem;
-  }
-  .couture-about p {
-    font-size: 0.875rem;
-  }
-  .couture-categories {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .couture-category-card img {
-    height: 20rem;
-  }
-  .couture-category-card h3 {
-    font-size: 1.1rem;
-  }
-  .couture-featured h2 {
-    font-size: 1.5rem;
-  }
-  .couture-featured p {
-    font-size: 0.875rem;
-  }
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
-  .featured-grid img {
-    height: 16rem;
-  }
-  .couture-craft {
-    grid-template-columns: 1fr;
-  }
-  .craft-text h2 {
-    font-size: 1.5rem;
-  }
-  .craft-text p {
-    font-size: 0.875rem;
-  }
-  .craft-img {
-    height: 20rem;
-  }
-  .couture-testimonials h2 {
-    font-size: 1.5rem;
-  }
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-  .testimonial-card img {
-    height: 14rem;
-  }
-  .testimonial-card p {
-    font-size: 0.8rem;
-  }
-  .couture-cta h2 {
-    font-size: 1.5rem;
-  }
+  .couture-hero { height: 60vh; }
+  .couture-hero-content { bottom: 8%; }
+  .couture-hero-content h1 { font-size: 1.75rem; }
+  .couture-hero-content p { font-size: 0.875rem; }
+  .couture-button { padding: 0.4rem 1.2rem; font-size: 0.875rem; }
+  .couture-about h2 { font-size: 1.5rem; }
+  .couture-about p { font-size: 0.875rem; }
+  .couture-categories { grid-template-columns: 1fr; gap: 1rem; }
+  .couture-category-card img { height: 20rem; }
+  .couture-category-card h3 { font-size: 1.1rem; }
+  .couture-featured h2 { font-size: 1.5rem; }
+  .couture-featured p { font-size: 0.875rem; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .featured-grid img { height: 16rem; }
+  .couture-craft { grid-template-columns: 1fr; }
+  .craft-text h2 { font-size: 1.5rem; }
+  .craft-text p { font-size: 0.875rem; }
+  .craft-img { height: 20rem; }
+  .couture-testimonials h2 { font-size: 1.5rem; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-card img { height: 14rem; }
+  .testimonial-card p { font-size: 0.8rem; }
+  .couture-cta h2 { font-size: 1.5rem; }
 }

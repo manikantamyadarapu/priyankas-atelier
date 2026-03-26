@@ -29,19 +29,19 @@ export default function PretCollection() {
 <section id="explore" className="couture-categories">
 
   <div className="couture-category-card">
-    <img src="/images/pret-kurti.jpg" />
+    <img src="/kurthi-pret.jpg" />
     <h3>Kurti Sets</h3>
     <p>Comfortable and elegant kurti sets for every occasion.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/pret-maxi.jpg" />
+    <img src="/maxifrock-pret.jpg" />
     <h3>Maxi Frocks</h3>
     <p>Flowy, graceful maxi frocks crafted for effortless style.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/pret-sharara.jpg" />
+    <img src="/sharara-pret.jpg" />
     <h3>Sharara Frocks</h3>
     <p>Beautiful sharara-style outfits with intricate detailing.</p>
   </div>
@@ -55,12 +55,11 @@ export default function PretCollection() {
         <p>Soft, wearable designs crafted for everyday style.</p>
 
         <div className="featured-grid">
-          <img src="/images/pf1.jpg" />
-          <img src="/images/pf2.jpg" />
-          <img src="/images/pf3.jpg" />
-          <img src="/images/pf4.jpg" />
-          <img src="/images/pf5.jpg" />
-          <img src="/images/pf6.jpg" />
+          <img src="/featured1-pret.jpg" />
+          <img src="/featured2-pret.jpg" />
+          <img src="/featured3-pret.jpg" />
+          <img src="/featured4-pret.jpg" />
+
         </div>
       </section>
 
@@ -75,7 +74,7 @@ export default function PretCollection() {
           </p>
         </div>
 
-        <img src="/images/pret-craft.jpg" className="craft-img" />
+        <img src="/heritage-pret.jpg" className="craft-img" />
       </section>
       <BookAConsult />
       <Footer />  

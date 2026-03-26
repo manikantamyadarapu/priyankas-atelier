@@ -35,25 +35,25 @@ export default function LehengaSet() {
       <section id="explore" className="couture-categories">
 
         <div className="couture-category-card">
-          <img src="/images/lehenga1.jpg" />
+          <img src="/bridal-lehenga.jpg" />
           <h3>Bridal Lehengas</h3>
           <p>Classic red & maroon silhouettes with intricate handwork.</p>
         </div>
 
         <div className="couture-category-card">
-          <img src="/images/lehenga2.jpg" />
+          <img src="/reception-lehenga.jpg" />
           <h3>Reception Lehengas</h3>
           <p>Modern shimmer, sequins, and contemporary silhouettes.</p>
         </div>
 
         <div className="couture-category-card">
-          <img src="/images/lehenga3.jpg" />
+          <img src="/sangeet-lehenga.jpg" />
           <h3>Sangeet Lehengas</h3>
           <p>Lightweight, elegant, and expressive for evening celebrations.</p>
         </div>
 
         <div className="couture-category-card">
-          <img src="/images/lehenga4.jpg" />
+          <img src="/partywear-lehenga.jpg" />
           <h3>Handwoven Lehengas</h3>
           <p>Banarasi, Kanjivaram, and artisanal textile lehengas.</p>
         </div>
@@ -68,12 +68,11 @@ export default function LehengaSet() {
         <p>A curated selection of our most loved handcrafted lehengas.</p>
 
         <div className="featured-grid">
-          <img src="/images/l1.jpg" />
-          <img src="/images/l2.jpg" />
-          <img src="/images/l3.jpg" />
-          <img src="/images/l4.jpg" />
-          <img src="/images/l5.jpg" />
-          <img src="/images/l6.jpg" />
+          <img src="/featured1-lehenga" />
+          <img src="/featured2-lehenga.jpg" />
+          <img src="/featured3-lehenga.jpg" />
+          <img src="/featured4-lehenga.jpg" />
+
         </div>
       </section>
 
@@ -91,31 +90,7 @@ export default function LehengaSet() {
           </p>
         </div>
 
-        <img src="/images/lehenga-craft.jpg" className="craft-img" />
-      </section>
-
-      {/* ===========================
-          6. TESTIMONIALS (Optional)
-      ============================ */}
-      <section className="couture-testimonials">
-        <h2>Loved by Brides</h2>
-
-        <div className="testimonials-grid">
-          <div className="testimonial-card">
-            <img src="/images/bride1.jpg" />
-            <p>“The lehenga made my day unforgettable.”</p>
-          </div>
-
-          <div className="testimonial-card">
-            <img src="/images/bride2.jpg" />
-            <p>“Every detail reflected true craftsmanship.”</p>
-          </div>
-
-          <div className="testimonial-card">
-            <img src="/images/bride3.jpg" />
-            <p>“It felt royal, elegant, and magical.”</p>
-          </div>
-        </div>
+        <img src="/heritage-lehenga.jpg" className="craft-img" />
       </section>
 
       <BookAConsult />
