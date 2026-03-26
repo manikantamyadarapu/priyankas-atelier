@@ -30,19 +30,19 @@ export default function RTWCollection() {
 <section id="explore" className="couture-categories">
 
   <div className="couture-category-card">
-    <img src="/images/rtw-western.jpg" />
+    <img src="/western-rtw.jpg" />
     <h3>Western Style</h3>
     <p>Contemporary silhouettes crafted for modern elegance.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/rtw-traditional.jpg" />
+    <img src="/traditional-rtw.jpg" />
     <h3>Traditional Style</h3>
     <p>Classic Indian designs with handcrafted detailing.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/rtw-layered-saree.jpg" />
+    <img src="/layered-rtw.jpg" />
     <h3>Layered Style Sarees</h3>
     <p>Graceful multi-layer drapes designed for modern celebrations.</p>
   </div>
@@ -57,12 +57,10 @@ export default function RTWCollection() {
         <p>A curated selection of our signature ready-to-wear ensembles.</p>
 
         <div className="featured-grid">
-          <img src="/images/rf1.jpg" />
-          <img src="/images/rf2.jpg" />
-          <img src="/images/rf3.jpg" />
-          <img src="/images/rf4.jpg" />
-          <img src="/images/rf5.jpg" />
-          <img src="/images/rf6.jpg" />
+          <img src="/featured1-rtw.jpg" />
+          <img src="/featured2-rtw.jpg" />
+          <img src="/featured3-rtw.jpg" />
+          <img src="/featured4-rtw.jpg" />
         </div>
       </section>
 
@@ -77,7 +75,7 @@ export default function RTWCollection() {
           </p>
         </div>
 
-        <img src="/images/rtw-craft.jpg" className="craft-img" />
+        <img src="/heritage-rtw.jpg" className="craft-img" />
       </section>
       <BookAConsult />
       <Footer />

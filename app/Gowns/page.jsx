@@ -36,25 +36,25 @@ export default function Gowns() {
 <section id="explore" className="couture-categories">
 
   <div className="couture-category-card">
-    <img src="/images/gown-traditional.jpg" />
+    <img src="/traditional-gown.jpg" />
     <h3>Traditional Gowns</h3>
     <p>Classic Indian-inspired gowns with rich detailing.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/gown-western.jpg" />
+    <img src="/simple-gown.jpg" />
     <h3>Western Gowns</h3>
     <p>Modern silhouettes crafted for premium elegance.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/gown-simple.jpg" />
+    <img src="/western-gown.jpg" />
     <h3>Simple Gowns</h3>
     <p>Minimal, graceful gowns perfect for intimate occasions.</p>
   </div>
 
   <div className="couture-category-card">
-    <img src="/images/gown-indo.jpg" />
+    <img src="/indowestern-gown.jpg" />
     <h3>Indo-Western Gowns</h3>
     <p>A fusion of Indian artistry with contemporary design.</p>
   </div>
@@ -70,12 +70,10 @@ export default function Gowns() {
         <p>A curated selection of our finest handcrafted gowns.</p>
 
         <div className="featured-grid">
-          <img src="/images/gf1.jpg" />
-          <img src="/images/gf2.jpg" />
-          <img src="/images/gf3.jpg" />
-          <img src="/images/gf4.jpg" />
-          <img src="/images/gf5.jpg" />
-          <img src="/images/gf6.jpg" />
+          <img src="/featured1-gown.jpg" />
+          <img src="/featured2-gown.jpg" />
+          <img src="/featured3-gown.jpg" />
+          <img src="/featured4-gown.jpg" />
         </div>
       </section>
 
@@ -93,32 +91,10 @@ export default function Gowns() {
           </p>
         </div>
 
-        <img src="/images/gown-craft.jpg" className="craft-img" />
+        <img src="/heritage-gown" className="craft-img" />
       </section>
 
-      {/* ===========================
-          6. TESTIMONIALS
-      ============================ */}
-      <section className="couture-testimonials">
-        <h2>Loved by Women Everywhere</h2>
 
-        <div className="testimonials-grid">
-          <div className="testimonial-card">
-            <img src="/images/gown-bride1.jpg" />
-            <p>“The gown was breathtaking — truly unforgettable.”</p>
-          </div>
-
-          <div className="testimonial-card">
-            <img src="/images/gown-bride2.jpg" />
-            <p>“Perfect fit, perfect elegance. I felt like royalty.”</p>
-          </div>
-
-          <div className="testimonial-card">
-            <img src="/images/gown-bride3.jpg" />
-            <p>“Every detail was magical and beautifully crafted.”</p>
-          </div>
-        </div>
-      </section>
       <BookAConsult />
       <Footer />
       
