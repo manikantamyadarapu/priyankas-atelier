@@ -16,7 +16,7 @@ body {
 ========================================= */
 
 .hero-section {
-  height: 100vh;
+  height: min(100vh, 100vh);
   position: relative;
   overflow: hidden;
 }
@@ -37,16 +37,8 @@ body {
   background: rgba(0,0,0,0.2);
 }
 
-@media (max-width: 48rem) {
-  .hero-title { font-size: 2.62rem; }
-  .hero-subtitle { font-size: 1rem; }
-}
-
-@media (max-width: 36rem) {
-  .hero-title { font-size: 2rem; }
-  .hero-subtitle { font-size: 0.875rem; }
-  .hero-section { height: 80vh; }
-}
+.hero-title  { font-size: clamp(2rem, 6vw, 4rem); }
+.hero-subtitle { font-size: clamp(0.875rem, 2vw, 1.25rem); }
 
 /* ==============================
    NAVBAR
@@ -57,7 +49,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2.19rem 0 1.25rem;
+  padding: clamp(1rem, 3vw, 2.19rem) 0 clamp(0.75rem, 2vw, 1.25rem);
   z-index: 999;
   text-align: center;
   transition: all 0.35s ease-in-out;
@@ -76,13 +68,13 @@ body {
 }
 
 .navbar-scrolled {
-  background: rgba(255, 255, 255, 0.9);
+  background: transparent;
   backdrop-filter: blur(0.25rem);
-  border-bottom: 0.06rem solid rgba(0, 0, 0, 0.08);
+  /* border-bottom: 0.06rem solid rgba(0, 0, 0, 0.08); */
 }
 
 .nav-logo h1 {
-  font-size: 2.25rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   letter-spacing: 0.25rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -94,18 +86,23 @@ body {
 .nav-menu {
   display: flex;
   justify-content: center;
-  gap: 2.81rem;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 3vw, 2.81rem);
 }
 
 .nav-menu a {
   text-decoration: none;
   letter-spacing: 0.08rem;
-  font-size: 1.05rem;
+  font-size: clamp(0.875rem, 1.5vw, 1.05rem);
   font-weight: 500;
-  transition: 0.3s ease;
+
+
   color: #000;
 }
-
+.navbar:hover {
+  background: transparent;
+  backdrop-filter: blur(6px);
+}
 .nav-menu a:hover { opacity: 0.65; }
 
 .navbar:not(.navbar-scrolled) .nav-logo h1,
@@ -114,24 +111,12 @@ body {
 }
 
 .navbar:not(.navbar-scrolled):hover {
-  background: rgba(255, 255, 255, 0.95);
+  background: transparent;  
 }
 
 .navbar:not(.navbar-scrolled):hover .nav-menu a,
 .navbar:not(.navbar-scrolled):hover .nav-logo h1 {
-  color: black;
-}
-
-@media (max-width: 48rem) {
-  .navbar { padding: 1.5rem 1rem; }
-  .nav-logo h1 { font-size: 1.75rem; }
-  .nav-menu { gap: 1.5rem; flex-wrap: wrap; }
-  .nav-menu a { font-size: 0.875rem; }
-}
-
-@media (max-width: 36rem) {
-  .nav-menu { flex-direction: column; gap: 1rem; }
-  .navbar { padding: 1rem 0.5rem; }
+  color: rgb(0, 0, 0);
 }
 
 /* =========================================
@@ -139,7 +124,7 @@ body {
 ========================================= */
 
 .founder-section {
-  padding: 8.75rem 1.25rem;
+  padding: clamp(5rem, 8vw, 8.75rem) clamp(1rem, 3vw, 1.25rem);
   background: #ffffff;
 }
 
@@ -147,22 +132,18 @@ body {
   max-width: 81.25rem;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 36rem), 1fr));
   gap: 4.38rem;
   align-items: center;
 }
 
-@media (min-width: 62.5rem) {
-  .founder-container { grid-template-columns: 1fr 1fr; }
-}
-
 .founder-left {
   text-align: center;
-  padding-right: 2.5rem;
+  padding-right: clamp(0rem, 2vw, 2.5rem);
 }
 
 .founder-subtitle {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 2vw, 1.15rem);
   letter-spacing: 0.25rem;
   text-transform: uppercase;
   color: #494949;
@@ -171,7 +152,7 @@ body {
 }
 
 .founder-title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.25;
   font-weight: 500;
   color: #000000;
@@ -187,11 +168,11 @@ body {
 }
 
 .founder-text {
-  font-size: 1.15rem;
+  font-size: clamp(1.08rem, 2.2vw, 1.28rem);
   line-height: 1.9;
   color: #1a1a1a;
   margin: 0 auto 0.9rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .founder-link {
@@ -209,23 +190,9 @@ body {
 
 .founder-image {
   width: 100%;
-  height: 100vh;
+  height: clamp(50vh, 80vw, 100vh);
   object-fit: cover;
-  border-radius: 12px;
-}
-
-@media (max-width: 48rem) {
-  .founder-section { padding: 5rem 1rem; }
-  .founder-title { font-size: 2.5rem; }
-  .founder-text { font-size: 1.1rem; }
-  .founder-image { height: 60vh; }
-  .founder-left { padding-right: 0; }
-}
-
-@media (max-width: 36rem) {
-  .founder-title { font-size: 2rem; }
-  .founder-text { font-size: 1rem; }
-  .founder-image { height: 50vh; }
+  border-radius: 6px;
 }
 
 /* ==============================
@@ -236,14 +203,23 @@ body {
   background: #000;
   margin: 10px;
   border: 20px solid #000;
-  border-radius: 12px;
+  border-radius: 6px;
+}
+
+.footer-inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-wrapper {
   background: transparent;
+  width: 100%;
+  max-width: 97.25rem;
   min-height: auto;
   padding: 8rem 4rem 6rem;
-  border-radius: 28px;
+  margin: 0 auto;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -256,10 +232,16 @@ body {
   max-width: 97.25rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 4fr 1fr 1fr 1fr 1fr 3fr;
-  gap: 3rem;
+  grid-template-columns: 4fr 1fr 1fr 1fr 3fr;
+  gap: 1rem;
   margin-top: 2rem;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 56.25rem) {
+  .footer-wrapper { padding: 4rem 2rem 3rem; border-radius: 18px; }
+  .footer-columns { grid-template-columns: 1fr; gap: 3rem; margin-bottom: 2rem; }
+  .footer-title { font-size: 1.6rem; }
 }
 
 .footer-title {
@@ -311,7 +293,7 @@ body {
 }
 
 .social-icon {
-  font-size: 20px;
+font-size: 18px!important;
   color: rgba(255,255,255,0.6);
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -344,6 +326,7 @@ body {
   color: white;
   font-size: 0.85rem;
   outline: none;
+  border-radius: 2px;
 }
 
 .newsletter-btn {
@@ -354,6 +337,7 @@ body {
   font-size: 0.85rem;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: 2px;
 }
 
 .newsletter-btn:hover { opacity: 0.8; }
@@ -377,24 +361,190 @@ body {
   font-family: "Optima", sans-serif;
 }
 
-@media (max-width: 56.25rem) {
-  .footer-wrapper { padding: 4rem 2rem 3rem; border-radius: 18px; }
-  .footer-columns { grid-template-columns: 1fr; gap: 3rem; margin-bottom: 2rem; }
-  .footer-title { font-size: 1.6rem; }
+.copyright-buddy {
+  display: block;
+  margin-top: 0.45rem;
 }
 
-@media (max-width: 36rem) {
-  .footer-outer { padding: 2rem 1rem; }
-  .footer-wrapper { padding: 3rem 1.5rem 2rem; border-radius: 12px; }
-  .footer-columns { gap: 2rem; }
-  .footer-title { font-size: 1.4rem; }
-  .footer-description { font-size: 0.85rem; }
-  .footer-heading { font-size: 0.8rem; }
-  .footer-col a { font-size: 0.85rem; }
-  .copyright { font-size: 0.8rem; }
-  .footer-frame { max-width: 300px; }
+.footer-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
 }
 
+.social-icon {
+  font-size: 20px;
+  color: rgba(255,255,255,0.7);
+  transition: all 0.35s ease;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.08);
+}
+/* ==============================
+   POLICY PAGE (MATCH FOOTER STYLE)
+============================== */
+
+.policy-container {
+  background: #000;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  color: whitesmoke;
+  font-family: "Optima", sans-serif;
+}
+
+.policy-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* TITLE (brand feel) */
+.policy-title {
+  font-size: 1.8rem; /* similar to footer-title */
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: "Optima", sans-serif;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+/* SECTION */
+.policy-section {
+  margin-bottom: 2.2rem;
+}
+
+/* HEADING (exact footer style) */
+.policy-heading {
+  font-size: 0.85rem; /* ✅ same as footer-heading */
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0.9rem;
+  color: whitesmoke;
+  font-family: "Optima", sans-serif;
+  text-transform: uppercase; /* 🔥 makes it premium */
+}
+
+/* TEXT */
+.policy-text {
+  font-size: 0.88rem; /* matches footer links */
+  line-height: 1.9;
+  color: rgb(170,170,170);
+  font-family: "Optima", sans-serif;
+}
+/* ==============================
+   CONTACT PAGE (LUXURY)
+============================== */
+
+.contact-container {
+  min-height: 100vh;
+  background: #ffffff; /* Matching main background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem 2rem;
+}
+
+/* CENTER BOX (CONSULT STYLE) */
+.contact-box {
+  width: clamp(calc(100% - 1.25rem), calc(100% - 4vw), calc(100% - 4rem));
+  max-width: clamp(960px, 90vw, 1300px);
+  min-height: clamp(320px, 40vw, 640px);
+  margin: 0 auto;
+  background: #000000;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 900px) {
+  .contact-box {
+    flex-direction: column;
+  }
+}
+
+.contact-image-side {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.contact-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-content-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 5rem);
+}
+
+/* TITLE */
+.contact-title {
+  font-size: 1.6rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* SUBTEXT */
+.contact-subtext {
+  font-size: 0.9rem;
+  color: rgb(170,170,170);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-family: "Optima", sans-serif;
+}
+
+/* DETAILS */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: whitesmoke;
+  font-size: 0.9rem;
+  font-family: "Optima", sans-serif;
+}
+
+.contact-icon {
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* BUTTON */
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  opacity: 0.8;
+}
 /* ==============================
    CATEGORY BANNERS
 ============================== */
@@ -407,7 +557,7 @@ body {
 
 .category-image-overlay {
   width: 100%;
-  height: 100vh;
+  height: clamp(70vh, 80vw, 100vh);
   position: relative;
   overflow: hidden;
 }
@@ -421,7 +571,7 @@ body {
 
 .category-content-overlay {
   position: absolute;
-  bottom: 5rem;
+  bottom: clamp(2rem, 5vw, 5rem);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -430,7 +580,7 @@ body {
 }
 
 .category-content-overlay h2 {
-  font-size: 2.62rem;
+  font-size: clamp(1.5rem, 4vw, 2.62rem);
   font-weight: 500;
   letter-spacing: 0.19rem;
   text-transform: uppercase;
@@ -440,43 +590,30 @@ body {
 
 .category-button-overlay {
   display: inline-block;
-  padding: 0.75rem 2.5rem;
-  border: 0.06rem solid white;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1.5rem, 3vw, 2.5rem);
+  border: transparent;
   color: white;
   text-decoration: none;
-  font-size: 1.12rem;
+  font-size: clamp(0.875rem, 2vw, 1.12rem);
   letter-spacing: 0.06rem;
   transition: 0.3s ease;
+  border-radius: 3px;
 }
 
 .category-button-overlay:hover { background: white; color: black; }
-
-@media (max-width: 48rem) {
-  .category-content-overlay { bottom: 3rem; }
-  .category-content-overlay h2 { font-size: 2rem; }
-  .category-button-overlay { padding: 0.6rem 2rem; font-size: 1rem; }
-  .category-image-overlay { height: 80vh; }
-}
-
-@media (max-width: 36rem) {
-  .category-content-overlay { bottom: 2rem; }
-  .category-content-overlay h2 { font-size: 1.5rem; }
-  .category-button-overlay { padding: 0.5rem 1.5rem; font-size: 0.875rem; }
-  .category-image-overlay { height: 70vh; }
-}
 
 /* ==============================
    CATEGORY PAGE
 ============================== */
 
 .category-page {
-  padding-top: 7.5rem;
+  padding-top: clamp(5rem, 8vw, 7.5rem);
   font-family: "Cormorant Garamond", serif;
 }
 
 .category-hero {
   width: 100%;
-  height: 75vh;
+  height: clamp(50vh, 70vw, 75vh);
   position: relative;
   overflow: hidden;
 }
@@ -485,12 +622,12 @@ body {
 
 .category-hero-title {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: clamp(1rem, 3vw, 2.5rem);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 4vw, 3rem);
   letter-spacing: 0.19rem;
   text-transform: uppercase;
   font-weight: 500;
@@ -499,86 +636,59 @@ body {
 .category-about {
   max-width: 56.25rem;
   text-align: center;
-  margin: 3.75rem auto;
-  font-size: 1.25rem;
+  margin: clamp(2.5rem, 5vw, 3.75rem) auto;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.7;
   color: #444;
+  padding: 0 clamp(1rem, 3vw, 0rem);
 }
 
 .category-grid {
   max-width: 75rem;
-  margin: 3.75rem auto;
+  margin: clamp(2.5rem, 5vw, 3.75rem) auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
-  gap: 1.88rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+  gap: clamp(1rem, 2vw, 1.88rem);
+  padding: 0 clamp(1rem, 2vw, 0rem);
 }
 
 .category-card { position: relative; overflow: hidden; }
 
 .category-card img {
   width: 100%;
-  height: 23.75rem;
+  height: clamp(18rem, 25vw, 23.75rem);
   object-fit: cover;
   transition: 0.3s ease;
 }
 
 .category-card:hover img { transform: scale(1.05); }
-.category-card-title { margin-top: 0.75rem; font-size: 1.25rem; font-weight: 500; }
+.category-card-title { margin-top: 0.75rem; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 500; }
 
 .category-highlight { max-width: 75rem; margin: 5rem auto; text-align: center; }
 
 .category-highlight img {
   width: 100%;
-  height: 34.38rem;
+  height: clamp(20rem, 35vw, 34.38rem);
   object-fit: cover;
-  border-radius: 0.38rem;
+  border-radius: 6px;
 }
 
-.category-highlight h3 { margin-top: 1.25rem; font-size: 2rem; }
+.category-highlight h3 { margin-top: 1.25rem; font-size: clamp(1.5rem, 3vw, 2rem); }
 
-.category-points { max-width: 50rem; margin: 3.75rem auto; }
-.category-points li { font-size: 1.25rem; margin: 0.62rem 0; }
+.category-points { max-width: 50rem; margin: 3.75rem auto; padding: 0 clamp(1rem, 2vw, 0rem); }
+.category-points li { font-size: clamp(1rem, 2vw, 1.25rem); margin: 0.62rem 0; }
 
-.category-cta { text-align: center; margin: 6.25rem 0; }
+.category-cta { text-align: center; margin: clamp(4rem, 8vw, 6.25rem) 0; }
 
 .category-cta a {
-  padding: 0.75rem 2.5rem;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1.5rem, 3vw, 2.5rem);
   border: 0.06rem solid black;
   text-decoration: none;
-  font-size: 1.12rem;
+  font-size: clamp(0.875rem, 2vw, 1.12rem);
   color: black;
 }
 
 .category-cta a:hover { background: black; color: white; }
-
-@media (max-width: 48rem) {
-  .category-page { padding-top: 5rem; }
-  .category-hero { height: 60vh; }
-  .category-hero-title { font-size: 2.25rem; bottom: 1.5rem; }
-  .category-about { font-size: 1.1rem; margin: 2.5rem auto; padding: 0 1rem; }
-  .category-grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.25rem; padding: 0 1rem; }
-  .category-card img { height: 20rem; }
-  .category-card-title { font-size: 1.1rem; }
-  .category-highlight img { height: 25rem; }
-  .category-highlight h3 { font-size: 1.75rem; }
-  .category-points { padding: 0 1rem; }
-  .category-points li { font-size: 1.1rem; }
-  .category-cta { margin: 4rem 0; }
-  .category-cta a { padding: 0.6rem 2rem; font-size: 1rem; }
-}
-
-@media (max-width: 36rem) {
-  .category-hero { height: 50vh; }
-  .category-hero-title { font-size: 1.75rem; bottom: 1rem; }
-  .category-about { font-size: 1rem; }
-  .category-grid { grid-template-columns: 1fr; gap: 1rem; }
-  .category-card img { height: 18rem; }
-  .category-card-title { font-size: 1rem; }
-  .category-highlight img { height: 20rem; }
-  .category-highlight h3 { font-size: 1.5rem; }
-  .category-points li { font-size: 1rem; }
-  .category-cta a { padding: 0.5rem 1.5rem; font-size: 0.875rem; }
-}
 
 /* ==============================
    QUOTE SECTION
@@ -586,14 +696,14 @@ body {
 
 .quote-section {
   width: 100%;
-  padding: 5rem 1.25rem;
+  padding: clamp(2rem, 6vw, 5rem) clamp(0.5rem, 3vw, 1.25rem);
   text-align: center;
   background: #ffffff;
   margin-top: -9.38rem;
 }
 
 .quote-text {
-  font-size: 1.12rem;
+  font-size: clamp(0.98rem, 2.2vw, 1.24rem);
   line-height: 1.6;
   max-width: 56.25rem;
   margin: auto;
@@ -606,74 +716,60 @@ body {
 .quote-logo img { opacity: 0.9; transition: 0.2s ease; }
 .quote-logo img:hover { opacity: 1; }
 
-@media (max-width: 48rem) {
-  .quote-section { padding: 3rem 1rem; margin-top: -6rem; }
-  .quote-text { font-size: 1rem; }
-}
-
-@media (max-width: 36rem) {
-  .quote-section { padding: 2rem 0.5rem; margin-top: -4rem; }
-  .quote-text { font-size: 0.875rem; }
-}
-
 /* ==============================
    10 YEARS PAGE
 ============================== */
 
 .tenpk-container {
-  padding: 7.5rem 1.25rem;
+  padding: clamp(5rem, 8vw, 7.5rem) clamp(1rem, 3vw, 1.25rem);
   text-align: center;
   background: #ffffff;
 }
 
 .tenpk-title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
   font-family: "Cormorant Garamond", serif;
   margin-bottom: 0.62rem;
 }
 
-.tenpk-subtitle { font-size: 1.12rem; color: #555; margin-bottom: 3.12rem; }
+.tenpk-subtitle { font-size: clamp(0.875rem, 2vw, 1.12rem); color: #555; margin-bottom: 3.12rem; }
 
 .tenpk-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
-  gap: 2.19rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+  gap: clamp(1rem, 2vw, 2.19rem);
   max-width: 75rem;
   margin: auto;
 }
 
-.tenpk-item img { width: 100%; height: auto; border-radius: 0.5rem; }
+.tenpk-item img { width: 100%; height: auto; border-radius: 6px; }
 
-@media (max-width: 48rem) {
-  .tenpk-container { padding: 5rem 1rem; }
-  .tenpk-title { font-size: 2.5rem; }
-  .tenpk-subtitle { font-size: 1rem; }
-  .tenpk-grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; }
+/* ── CONSULT SECTION ── */
+.consult-wrapper {
+  /* no extra wrapper styles needed */
 }
 
-@media (max-width: 36rem) {
-  .tenpk-title { font-size: 2rem; }
-  .tenpk-subtitle { font-size: 0.875rem; }
-  .tenpk-grid { grid-template-columns: 1fr; gap: 1rem; }
-}
-
-
-/* ── BASE (applies to all, overridden below) ── */
 .consult-section {
   position: relative;
-  width: calc(100% - 4rem);
-  max-width: 1000px;
-  min-height: 560px;
-  margin: 4rem auto;
-  background: #000000 ;
-  border-radius: 12px;
+  width: clamp(calc(100% - 1.25rem), calc(100% - 4vw), calc(100% - 4rem));
+  max-width: clamp(960px, 90vw, 1300px);
+  min-height: clamp(320px, 40vw, 640px);
+  margin: clamp(1rem, 4vw, 6rem) auto;
+  background: #000000;
+  border-radius: 6px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.consult-black-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 0;
+}
 
 .consult-canvas {
   position: absolute;
@@ -692,280 +788,71 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 4rem 2rem;
-  max-width: 680px;
+  padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 4vw, 2rem);
+  max-width: clamp(280px, 80vw, 780px);
   width: 100%;
 }
 
 .consult-sub {
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.50rem;
-  letter-spacing: 0.42em;
+  font-size: clamp(0.5rem, 1vw, 0.85rem);
+  letter-spacing: clamp(0.22em, 3vw, 0.48em);
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(0.9rem, 2vw, 1.6rem);
   font-weight: 400;
 }
- 
+
 .consult-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.6rem, 3vw, 2.6rem) !important;
+  font-size: clamp(1.6rem, 4vw, 2.6rem) !important;
   font-weight: 400;
   line-height: 1.08;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
   color: #ffffff;
   letter-spacing: -0.01em;
 }
- 
+
 .consult-title em {
   font-style: normal;
-  font-size: 2.6rem;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
   color: rgba(255, 255, 255, 0.6);
 }
- 
+
 .consult-text {
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.82rem;                          
+  font-size: clamp(0.82rem, 1.5vw, 1.15rem);
   line-height: 1.85;
-  max-width: 520px;
-  margin: 0 auto 2rem;
+  max-width: clamp(280px, 70vw, 600px);
+  margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
   color: rgba(255, 255, 255, 0.65);
   font-weight: 400;
 }
+
 .consult-btn {
-  padding: 0.78rem 2.6rem;
+  display: inline-block;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1.5rem, 3vw, 2.5rem);
+
+  color: white; /* ✅ same text color */
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  text-decoration: none;
+  font-size: clamp(0.875rem, 2vw, 1.12rem);
+  letter-spacing: 0.06rem;
+
+  border-radius: 6px; /* ✅ match your design system */
+  transition: 0.3s ease;
+
   font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
-  transition: background 0.35s ease, color 0.35s ease,
-    border-color 0.35s ease, transform 0.25s ease;
 }
 
+
+
+/* HOVER SAME AS CATEGORY BUTTON */
 .consult-btn:hover {
   background: white;
-  color: #000;
-  border-color: white;
-  transform: translateY(-2px);
-}
-
-
-/* ==============================
-   xs — Small phones (up to 480px)
-============================== */
-@media (max-width: 30rem) {
-  .consult-section {
-    width: calc(100% - 1.25rem);
-    min-height: 320px;
-    margin: 1rem auto;
-    border-radius: 12px;
-  }
-  .consult-content {
-    padding: 2rem 1rem;
-    max-width: 100%;
-  }
-  .consult-sub {
-    font-size: 0.55rem;
-    letter-spacing: 0.22em;
-    margin-bottom: 0.9rem;
-  }
-  .consult-title {
-    font-size: clamp(1.6rem, 8vw, 2.2rem);
-    margin-bottom: 1rem;
-  }
-  .consult-text {
-    font-size: 0.82rem;
-    line-height: 1.7;
-    max-width: 280px;
-    margin-bottom: 1.5rem;
-  }
-  .consult-btn {
-    padding: 0.55rem 1.5rem;
-    font-size: 0.82rem;
-    letter-spacing: 0.08em;
-  }
-}
-
-
-/* ==============================
-   sm — Phones / large phones (481px – 768px)
-============================== */
-@media (min-width: 30.0625rem) and (max-width: 48rem) {
-  .consult-section {
-    width: calc(100% - 2rem);
-    min-height: 400px;
-    margin: 2rem auto;
-    border-radius: 16px;
-  }
-  .consult-content {
-    padding: 2.5rem 1.5rem;
-    max-width: 100%;
-  }
-  .consult-sub {
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    margin-bottom: 1.1rem;
-  }
-  .consult-title {
-    font-size: clamp(1.9rem, 7vw, 2.8rem);
-    margin-bottom: 1.2rem;
-  }
-  .consult-text {
-    font-size: 0.9rem;
-    max-width: 360px;
-    margin-bottom: 1.8rem;
-  }
-  .consult-btn {
-    padding: 0.65rem 2rem;
-    font-size: 0.9rem;
-  }
-}
-
-
-/* ==============================
-   md — Tablets (769px – 1024px)
-============================== */
-@media (min-width: 48.0625rem) and (max-width: 64rem) {
-  .consult-section {
-    width: calc(100% - 3rem);
-    min-height: 480px;
-    margin: 3rem auto;
-    border-radius: 20px;
-  }
-  .consult-content {
-    padding: 3.5rem 2rem;
-    max-width: 580px;
-  }
-  .consult-sub {
-    font-size: 0.72rem;
-    letter-spacing: 0.36em;
-    margin-bottom: 1.3rem;
-  }
-  .consult-title {
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    margin-bottom: 1.5rem;
-  }
-  .consult-text {
-    font-size: 0.98rem;
-    max-width: 440px;
-    margin-bottom: 2rem;
-  }
-  .consult-btn {
-    padding: 0.72rem 2.2rem;
-    font-size: 0.95rem;
-  }
-}
-
-
-/* ==============================
-   lg — Laptops (1025px – 1280px)
-============================== */
-@media (min-width: 64.0625rem) and (max-width: 80rem) {
-  .consult-section {
-    width: calc(100% - 4rem);
-    max-width: 960px;
-    min-height: 520px;
-    margin: 4rem auto;
-    border-radius: 22px;
-  }
-  .consult-content {
-    padding: 4rem 2rem;
-    max-width: 640px;
-  }
-  .consult-sub {
-    font-size: 0.76rem;
-    letter-spacing: 0.4em;
-    margin-bottom: 1.4rem;
-  }
-  .consult-title {
-    font-size: clamp(2.6rem, 4vw, 3.6rem);
-    margin-bottom: 1.6rem;
-  }
-  .consult-text {
-    font-size: 1rem;
-    max-width: 480px;
-    margin-bottom: 2rem;
-  }
-  .consult-btn {
-    padding: 0.75rem 2.4rem;
-    font-size: 0.98rem;
-  }
-}
-
-
-/* ==============================
-   xl — Desktops (1281px – 1536px)
-============================== */
-@media (min-width: 80.0625rem) and (max-width: 96rem) {
-  .consult-section {
-    width: calc(100% - 5rem);
-    max-width: 1100px;
-    min-height: 580px;
-    margin: 5rem auto;
-    border-radius: 26px;
-  }
-  .consult-content {
-    padding: 4.5rem 2rem;
-    max-width: 700px;
-  }
-  .consult-sub {
-    font-size: 0.8rem;
-    letter-spacing: 0.44em;
-    margin-bottom: 1.5rem;
-  }
-  .consult-title {
-    font-size: clamp(3rem, 4vw, 4.2rem);
-    margin-bottom: 1.8rem;
-  }
-  .consult-text {
-    font-size: 1.08rem;
-    max-width: 540px;
-    margin-bottom: 2.2rem;
-  }
-  .consult-btn {
-    padding: 0.82rem 2.8rem;
-    font-size: 1.02rem;
-  }
-}
-
-
-/* ==============================
-   2xl — Large / wide screens (1537px+)
-============================== */
-@media (min-width: 96.0625rem) {
-  .consult-section {
-    width: calc(100% - 8rem);
-    max-width: 1300px;
-    min-height: 640px;
-    margin: 6rem auto;
-    border-radius: 30px;
-  }
-  .consult-content {
-    padding: 5rem 2rem;
-    max-width: 780px;
-  }
-  .consult-sub {
-    font-size: 0.85rem;
-    letter-spacing: 0.48em;
-    margin-bottom: 1.6rem;
-  }
-  .consult-title {
-    font-size: clamp(3.4rem, 3.5vw, 5rem);
-    margin-bottom: 2rem;
-  }
-  .consult-text {
-    font-size: 1.15rem;
-    max-width: 600px;
-    margin-bottom: 2.5rem;
-  }
-  .consult-btn {
-    padding: 0.9rem 3.2rem;
-    font-size: 1.1rem;
-    letter-spacing: 0.15em;
-  }
+  color: black;
 }
 /* ==============================
    COUTURE / GENERAL PAGE
@@ -973,7 +860,7 @@ body {
 
 .couture-page { font-family: "Cormorant Garamond", serif; color: #222; }
 
-.couture-hero { position: relative; width: 100%; height: 85vh; overflow: hidden; }
+.couture-hero { position: relative; width: 100%; height: clamp(60vh, 75vw, 85vh); overflow: hidden; }
 .couture-hero-img { width: 100%; height: 100%; object-fit: cover; }
 
 .couture-hero-content {
@@ -985,144 +872,101 @@ body {
   color: white;
 }
 
-.couture-hero-content h1 { font-size: 3rem; letter-spacing: 0.12rem; margin-bottom: 0.62rem; }
-.couture-hero-content p { font-size: 1.12rem; margin-bottom: 1.25rem; opacity: 0.9; }
+.couture-hero-content h1 { font-size: clamp(1.75rem, 4vw, 3rem); letter-spacing: 0.12rem; margin-bottom: 0.62rem; }
+.couture-hero-content p  { font-size: clamp(0.875rem, 2vw, 1.12rem); margin-bottom: 1.25rem; opacity: 0.9; }
 
 .couture-button {
   text-decoration: none;
-  padding: 0.62rem 2rem;
+  padding: clamp(0.4rem, 1vw, 0.62rem) clamp(1.2rem, 2vw, 2rem);
   border: 0.06rem solid white;
   color: white;
   letter-spacing: 0.06rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
   transition: 0.3s;
 }
 
 .couture-button:hover { background: white; color: black; }
 
-.couture-about { max-width: 56.25rem; margin: 6.25rem auto; text-align: center; padding: 0 1.25rem; }
-.couture-about h2 { font-size: 2.25rem; margin-bottom: 1.12rem; }
-.couture-about p { font-size: 1.12rem; line-height: 1.7; opacity: 0.85; }
+.couture-about {
+  max-width: 56.25rem;
+  margin: clamp(4rem, 8vw, 6.25rem) auto;
+  text-align: center;
+  padding: 0 clamp(1rem, 3vw, 1.25rem);
+}
+.couture-about h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1.12rem; }
+.couture-about p  { font-size: clamp(0.875rem, 2vw, 1.12rem); line-height: 1.7; opacity: 0.85; }
 
 .couture-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.25rem), 1fr));
+  gap: clamp(1rem, 2vw, 2.5rem);
   max-width: 75rem;
   margin: 5rem auto;
-  padding: 0 1.25rem;
+  padding: 0 clamp(1rem, 2vw, 1.25rem);
 }
 
 .couture-category-card img {
   width: 100%;
-  height: 26.25rem;
+  height: clamp(20rem, 28vw, 26.25rem);
   object-fit: cover;
   object-position: top;
   transition: transform 0.4s ease;
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 .couture-category-card:hover img { transform: scale(1.03); }
-.couture-category-card h3 { font-size: 1.38rem; margin-top: 0.75rem; }
-.couture-category-card p { font-size: 1rem; opacity: 0.7; }
+.couture-category-card h3 { font-size: clamp(1.1rem, 2vw, 1.38rem); margin-top: 0.75rem; }
+.couture-category-card p  { font-size: clamp(0.875rem, 1.5vw, 1rem); opacity: 0.7; }
 
-.couture-featured { text-align: center; max-width: 75rem; margin: 7.5rem auto; padding: 0 1.25rem; }
-.couture-featured h2 { font-size: 2.25rem; margin-bottom: 0.62rem; }
-.couture-featured p { font-size: 1.06rem; opacity: 0.75; margin-bottom: 2.5rem; }
+.couture-featured {
+  text-align: center;
+  max-width: 75rem;
+  margin: clamp(5rem, 8vw, 7.5rem) auto;
+  padding: 0 clamp(1rem, 2vw, 1.25rem);
+}
+.couture-featured h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 0.62rem; }
+.couture-featured p  { font-size: clamp(0.875rem, 1.5vw, 1.06rem); opacity: 0.75; margin-bottom: 2.5rem; }
 
 .featured-grid {
   display: grid;
-  gap: 1.56rem;
-  grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
+  gap: clamp(1rem, 2vw, 1.56rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.25rem), 1fr));
 }
 
-.featured-grid img { width: 100%; height: 22.5rem; object-fit: cover; border-radius: 6px;}
+.featured-grid img { width: 100%; height: clamp(16rem, 22vw, 22.5rem); object-fit: cover; border-radius: 3px; }
 
 .couture-craft {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
   max-width: 75rem;
-  margin: 8.75rem auto;
-  gap: 2.5rem;
-  padding: 0 1.25rem;
+  margin: clamp(6rem, 9vw, 8.75rem) auto;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: 0 clamp(1rem, 2vw, 1.25rem);
 }
 
-.craft-text h2 { font-size: 2.12rem; margin-bottom: 1.25rem; }
-.craft-text p { line-height: 1.7; opacity: 0.75; }
-.craft-img { width: 100%; object-fit: cover; height: 28.12rem; border-radius: 6px; }
+.craft-text h2 { font-size: clamp(1.5rem, 3vw, 2.12rem); margin-bottom: 1.25rem; }
+.craft-text p  { line-height: 1.7; opacity: 0.75; font-size: clamp(0.875rem, 2vw, 1rem); }
+.craft-img { width: 100%; object-fit: cover; height: clamp(20rem, 30vw, 28.12rem); border-radius: 3px; }
 
-@media (max-width: 53.12rem) { .couture-craft { grid-template-columns: 1fr; } }
-
-.couture-testimonials { text-align: center; padding: 0 1.25rem; margin-bottom: 7.5rem; }
-.couture-testimonials h2 { font-size: 2.12rem; margin-bottom: 2.5rem; }
+.couture-testimonials {
+  text-align: center;
+  padding: 0 clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: clamp(5rem, 8vw, 7.5rem);
+}
+.couture-testimonials h2 { font-size: clamp(1.5rem, 3vw, 2.12rem); margin-bottom: 2.5rem; }
 
 .testimonials-grid {
   display: grid;
-  gap: 2.5rem;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   max-width: 62.5rem;
   margin: auto;
-  grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.25rem), 1fr));
 }
 
-.testimonial-card img { width: 100%; height: 18.75rem; object-fit: cover; }
-.testimonial-card p { margin-top: 0.75rem; font-size: 1rem; opacity: 0.8; }
+.testimonial-card img { width: 100%; height: clamp(14rem, 18vw, 18.75rem); object-fit: cover; }
+.testimonial-card p   { margin-top: 0.75rem; font-size: clamp(0.8rem, 1.5vw, 1rem); opacity: 0.8; }
 
-.couture-cta { text-align: center; margin: 7.5rem 0; }
-.couture-cta h2 { font-size: 2rem; margin-bottom: 1.25rem; }
+.couture-cta { text-align: center; margin: clamp(5rem, 8vw, 7.5rem) 0; }
+.couture-cta h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.25rem; }
 .couture-cta .couture-button { border-color: black; color: black; }
 .couture-cta .couture-button:hover { background: black; color: white; }
-
-@media (max-width: 48rem) {
-  .couture-hero { height: 70vh; }
-  .couture-hero-content h1 { font-size: 2.25rem; }
-  .couture-hero-content p { font-size: 1rem; }
-  .couture-button { padding: 0.5rem 1.5rem; }
-  .couture-about { margin: 4rem auto; padding: 0 1rem; }
-  .couture-about h2 { font-size: 1.75rem; }
-  .couture-about p { font-size: 1rem; }
-  .couture-categories { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; padding: 0 1rem; }
-  .couture-category-card img { height: 22rem; }
-  .couture-category-card h3 { font-size: 1.25rem; }
-  .couture-category-card p { font-size: 0.875rem; }
-  .couture-featured { margin: 5rem auto; padding: 0 1rem; }
-  .couture-featured h2 { font-size: 1.75rem; }
-  .couture-featured p { font-size: 1rem; }
-  .featured-grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
-  .featured-grid img { height: 18rem; }
-  .couture-craft { margin: 6rem auto; gap: 1.5rem; padding: 0 1rem; }
-  .craft-text h2 { font-size: 1.75rem; }
-  .craft-text p { font-size: 1rem; }
-  .craft-img { height: 22rem; }
-  .couture-testimonials { margin-bottom: 5rem; padding: 0 1rem; }
-  .couture-testimonials h2 { font-size: 1.75rem; }
-  .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; }
-  .testimonial-card img { height: 15rem; }
-  .testimonial-card p { font-size: 0.875rem; }
-  .couture-cta { margin: 5rem 0; }
-  .couture-cta h2 { font-size: 1.75rem; }
-}
-
-@media (max-width: 36rem) {
-  .couture-hero { height: 60vh; }
-  .couture-hero-content { bottom: 8%; }
-  .couture-hero-content h1 { font-size: 1.75rem; }
-  .couture-hero-content p { font-size: 0.875rem; }
-  .couture-button { padding: 0.4rem 1.2rem; font-size: 0.875rem; }
-  .couture-about h2 { font-size: 1.5rem; }
-  .couture-about p { font-size: 0.875rem; }
-  .couture-categories { grid-template-columns: 1fr; gap: 1rem; }
-  .couture-category-card img { height: 20rem; }
-  .couture-category-card h3 { font-size: 1.1rem; }
-  .couture-featured h2 { font-size: 1.5rem; }
-  .couture-featured p { font-size: 0.875rem; }
-  .featured-grid { grid-template-columns: 1fr; }
-  .featured-grid img { height: 16rem; }
-  .couture-craft { grid-template-columns: 1fr; }
-  .craft-text h2 { font-size: 1.5rem; }
-  .craft-text p { font-size: 0.875rem; }
-  .craft-img { height: 20rem; }
-  .couture-testimonials h2 { font-size: 1.5rem; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .testimonial-card img { height: 14rem; }
-  .testimonial-card p { font-size: 0.8rem; }
-  .couture-cta h2 { font-size: 1.5rem; }
-}

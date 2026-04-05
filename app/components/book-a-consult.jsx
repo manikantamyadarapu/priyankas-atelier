@@ -183,8 +183,7 @@ export default function BookAConsult() {
   return (
     <div className="consult-wrapper">
       <section ref={sectionRef} className="consult-section">
-  {/* 🔥 BLACK OVERLAY */}
-  <div className="consult-black-overlay" />
+
 
   <canvas ref={canvasRef} className="consult-canvas" />
 

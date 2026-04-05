@@ -3,7 +3,7 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import Link from "next/link";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -61,63 +61,60 @@ export default function Footer() {
                 Known for stunning bridal wear and celebrity-inspired designs, each piece is
                 crafted to bring out the beauty and grace of every Indian woman.
               </p>
+                <div className="footer-socials about-socials">
+    <a
+      href="https://www.instagram.com/priyankasatelier"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="social-icon"
+    >
+      <FaInstagram />
+    </a>
+
+    <a
+      href="https://wa.me/919999999999"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="social-icon"
+    >
+      <FaWhatsapp />
+    </a>
+
+    <a
+      href="mailto:care@priyankasatelier.in"
+      className="social-icon"
+    >
+      <MdEmail />
+    </a>
+  </div>
             </div>
 
             {/* BRAND */}
             <div className="footer-col">
               <h3 className="footer-heading">THE BRAND</h3>
-              <a href="/bridal-wear">Bridal Wear</a>
+              <a href="/blouses">Blouses</a>
+              <a href="/couture-collection">Couture</a>
               <a href="/about-us">About Us</a>
-              <a href="/contact">Contact Us</a>
             </div>
 
-            {/* COLLAB */}
+
+
+            {/* POLICIES */}
+            <div className="footer-col">
+  <h3 className="footer-heading">POLICIES</h3>
+
+  <Link href="/privacy-policy">Privacy Policy</Link>
+  <Link href="/terms-and-conditions">Terms of Service</Link>
+  <Link href="https://calendly.com/care-priyankasatelier/30min">Book a Consultation</Link>
+</div>
+{/* COLLAB */}
             <div className="footer-col">
               <h3 className="footer-heading">COLLAB</h3>
               <a href="#">Explore</a>
             </div>
 
-            {/* POLICIES */}
-            <div className="footer-col">
-              <h3 className="footer-heading">POLICIES</h3>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Shipping Policy</a>
-              <a href="#">Terms of Service</a>
-            </div>
-
             {/* FOLLOW */}
-            <div className="footer-col">
-              <h3 className="footer-heading">FOLLOW</h3>
 
-              <div className="footer-socials">
-                <a
-                  href="https://www.instagram.com/priyankasatelier"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram />
-                </a>
-
-                <a
-                  href="https://wa.me/919999999999"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon"
-                  aria-label="WhatsApp"
-                >
-                  <FaWhatsapp />
-                </a>
-                <a
-                  href="mailto:care@priyankasatelier.in"
-                  className="social-icon"
-                  aria-label="Email"
-                >
-                  <MdEmail />
-                </a>
-              </div>
-            </div>
              {/* NEWSLETTER */}
 <div className="footer-col footer-newsletter">
 
@@ -155,6 +152,7 @@ export default function Footer() {
     className="footer-frame" 
   /> */}
   © {new Date().getFullYear()} Priyanka’s Atelier.
+  <span className="copyright-buddy">- BY WS</span>
 </div>
         </div>
       </div>

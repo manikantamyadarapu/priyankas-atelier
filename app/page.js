@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CategorySection from "./components/CategorySection";
-import TenYearsOfPK from "./components/ten-years-of-pk";  
 import BookAConsult from "./components/book-a-consult";
 import Founder from "./components/Founder";
 import QuoteSection from "./components/QuoteSection";

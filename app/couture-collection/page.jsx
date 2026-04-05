@@ -8,7 +8,7 @@ export default function Couture() {
           1. HERO BANNER
       ============================ */}
       <section className="couture-hero">
-        <img src="/couture-page-header.jpg" className="couture-hero-img" />
+        <img src="/Hero_img.avif" className="couture-hero-img" />
         
         <div className="couture-hero-content">
           <h1>Couture Collection</h1>
