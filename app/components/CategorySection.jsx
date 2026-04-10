@@ -6,10 +6,12 @@ export default function CategorySection({ title, image, link }) {
 
         <div className="category-content-overlay">
           <h2>{title}</h2>
-          <a href={link} className="category-button-overlay">
-            Explore →
-        </a>
-      </div>
+          {link && (
+            <a href={link} className="category-button-overlay">
+              Explore →
+            </a>
+          )}
+        </div>
       </div>
     </section>
   );

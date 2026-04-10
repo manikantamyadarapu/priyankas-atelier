@@ -151,7 +151,7 @@ export default function Footer() {
     className="footer-frame" 
   /> */}
   © {new Date().getFullYear()} Priyanka’s Atelier.
-  {/* <span className="copyright-buddy">- BY WS</span> */}
+  <span className="copyright-buddy">- BY WS</span>
 </div>
         </div>
       </div>

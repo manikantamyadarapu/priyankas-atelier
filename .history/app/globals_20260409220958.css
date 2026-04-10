@@ -653,7 +653,7 @@ body {
 .category-section {
   width: 100%;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1.;
 }
 
 .category-image-overlay {
@@ -857,102 +857,27 @@ backdrop-filter: blur(12px);
 .book-consult-wrapper {
   display: flex;
   justify-content: center;
-  padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 3vw, 1.25rem);
-  background: #ffffff;
-}
-
-.book-consult-card {
-  width: 100%;
-  max-width: 75rem;
-  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 55%, #111111 100%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 6px;
-  padding: clamp(2.25rem, 6vw, 4.75rem) clamp(1.25rem, 4vw, 4rem);
-  text-align: center;
-  color: #f4f4f4;
-  position: relative;
-  overflow: hidden;
-}
-
-.book-consult-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.08), transparent 35%);
-}
-
-.book-consult-eyebrow {
-  font-size: clamp(0.72rem, 1.4vw, 0.9rem);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 0.8rem;
-  font-family: "Optima", sans-serif;
-}
-
-.book-consult-title {
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 500;
-  line-height: 1.15;
-  margin-bottom: 1rem;
-  letter-spacing: 0.04em;
-}
-
-.book-consult-description {
-  max-width: 44rem;
-  margin: 0 auto;
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.8);
-  font-family: "Optima", sans-serif;
-}
-
-.book-consult-actions {
-  margin-top: clamp(1.8rem, 4vw, 2.8rem);
-  display: flex;
-  justify-content: center;
-  gap: 0.85rem;
-  flex-wrap: wrap;
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: transparent;
 }
 
 .book-consult-btn {
   display: inline-block;
-  padding: 0.85rem 1.6rem;
-  border: 1px solid #ffffff;
+  padding: 0.85rem 2.2rem;
+  border: 1px solid #000;
   color: #000;
   text-decoration: none;
-  font-family: "Optima", sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.12rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
   text-transform: uppercase;
-  transition: all 0.28s ease;
+  transition: all 0.3s ease;
   border-radius: 2px;
-  background: #ffffff;
-  min-width: 13.5rem;
-  text-align: center;
 }
 
 .book-consult-btn:hover {
-  background: transparent;
-  color: #ffffff;
-}
-
-.book-consult-btn--ghost {
-  background: transparent;
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.65);
-}
-
-.book-consult-btn--ghost:hover {
-  background: #ffffff;
-  color: #000000;
-}
-
-@media (max-width: 40rem) {
-  .book-consult-btn {
-    min-width: 100%;
-  }
+  background: #000;
+  color: #fff;
 }
 
 
