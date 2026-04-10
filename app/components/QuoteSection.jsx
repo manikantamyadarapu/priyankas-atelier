@@ -10,11 +10,11 @@ export default function QuoteSection() {
 
       <div className="quote-logo">
         <Image 
-          src="/Priyanka's atelier logo.png"       // your small logo
-          alt="Priyanka's Atelier Logo"
-          width={25}
-          height={35}
-        />
+  src="/logo.png"
+  alt="Priyanka Atelier Logo"
+  width={25}
+  height={35}
+/>
       </div>
     </section>
   );

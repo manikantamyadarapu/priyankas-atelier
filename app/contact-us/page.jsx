@@ -47,8 +47,9 @@ export default function ContactPage() {
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginTop: '2rem' }}
+            className="category-button-overlay"
           >
-            <button className="consult-btn">Start Conversation</button>
+            Start Conversation →
           </a>
         </div>
 

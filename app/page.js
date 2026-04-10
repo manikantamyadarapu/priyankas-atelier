@@ -14,17 +14,17 @@ export default function Home() {
       {/* ALL CATEGORY BANNERS */}
         <CategorySection
         title="Couture Collection"
-        image="/Hero_img.avif"
+        image="/couture-hero.webp"
         link="/couture-collection"
       />
          <CategorySection
         title="Lehenga Set"
-        image="lehenga.jpg"
+        image="/lehenga-hero.jpg"
         link="/lehenga-set"
       />
         <CategorySection
         title="Gowns"
-        image="/Gowns"
+        image="/gowns-hero.png"
         link="/Gowns"
       />
         <CategorySection
@@ -41,7 +41,6 @@ export default function Home() {
       <CategorySection
         title="Ten year's of pk"
         image="/ten_years.jpg"
-        link="/ten-years-of-pk"
       />
       <BookAConsult/>
       <Founder />
