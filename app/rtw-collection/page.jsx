@@ -11,7 +11,6 @@ export default function RTWCollection() {
         <div className="couture-hero-content">
           <h1>RTW Collection</h1>
           <p>Thoughtfully designed ready-to-wear ensembles.</p>
-          <a href="#explore" className="couture-button">Explore Collection →</a>
         </div>
       </section>
 

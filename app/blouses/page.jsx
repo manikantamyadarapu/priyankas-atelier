@@ -14,9 +14,6 @@ export default function BlousePage() {
         <div className="couture-hero-content">
           <h1>Blouse Collection</h1>
           <p>Statement blouses crafted to elevate every saree & lehenga.</p>
-          <a href="#explore" className="couture-button">
-            Explore Collection →
-          </a>
         </div>
       </section>
 

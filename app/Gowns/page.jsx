@@ -14,7 +14,6 @@ export default function Gowns() {
         <div className="couture-hero-content">
           <h1>Gowns</h1>
           <p>Elegant handcrafted gowns for modern celebrations.</p>
-          <a href="#explore" className="couture-button">Explore Collection →</a>
         </div>
       </section>
 

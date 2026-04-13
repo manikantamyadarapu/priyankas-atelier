@@ -13,7 +13,6 @@ export default function Couture() {
         <div className="couture-hero-content">
           <h1>Couture Collection</h1>
           <p>Handcrafted heirlooms designed for the modern Indian bride.</p>
-          <a href="#explore" className="couture-button">Explore Collection →</a>
         </div>
       </section>
 
