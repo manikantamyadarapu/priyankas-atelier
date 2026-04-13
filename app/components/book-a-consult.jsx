@@ -1,19 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DressParticles from "./DressParticles";
 
 export default function BookAConsult() {
-  const [isActive, setIsActive] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section 
+      ref={sectionRef}
       className="book-consult-wrapper"
-      onMouseEnter={() => setIsActive(true)}
-      onMouseLeave={() => setIsActive(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="book-consult-card">
-        <DressParticles isActive={isActive} />
+        <DressParticles isActive={isInView || isHovered} />
         <p className="book-consult-eyebrow">Personal Styling Session</p>
         <h2 className="book-consult-title">Book A Consultation</h2>
         <p className="book-consult-description">
@@ -42,4 +61,3 @@ export default function BookAConsult() {
     </section>
   );
 }
-

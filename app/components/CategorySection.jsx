@@ -8,7 +8,7 @@ export default function CategorySection({ title, image, link }) {
           <h2>{title}</h2>
           {link && (
             <a href={link} className="category-button-overlay">
-              Explore →
+              Explore
             </a>
           )}
         </div>
