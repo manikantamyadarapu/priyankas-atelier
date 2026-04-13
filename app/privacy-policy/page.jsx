@@ -1,4 +1,7 @@
 import PolicyPage from "../components/PolicyPage";
+import Navbar from "../components/Navbar";
+import BookAConsult from "../components/book-a-consult";
+import Footer from "../components/Footer";
 
 export default function PrivacyPage() {
   const sections = [
@@ -44,5 +47,12 @@ export default function PrivacyPage() {
     }
   ];
 
-  return <PolicyPage title="Privacy Policy" sections={sections} />;
-}
+  return (
+    <main>
+      <Navbar />
+      <PolicyPage title="Privacy Policy" sections={sections} />
+      <BookAConsult />
+      <Footer />
+    </main>
+  );
+}

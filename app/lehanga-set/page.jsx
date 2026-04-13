@@ -8,7 +8,7 @@ export default function LehengaSet() {
           1. HERO BANNER
       ============================ */}
       <section className="couture-hero">
-        <img src="/images/lehenga-hero.jpg" className="couture-hero-img" />
+        <img src="/lehenga-hero.jpg" className="couture-hero-img" />
         
         <div className="couture-hero-content">
           <h1>Lehenga Set</h1>

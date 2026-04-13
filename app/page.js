@@ -29,13 +29,13 @@ export default function Home() {
       />
         <CategorySection
         title="RTW Collection"
-        image="/rtw.jpg"
+        image="/rtw-hero.jpg"
         link="/rtw-collection"
       />
 
       <CategorySection
         title="Pret Collection"
-        image="/pret.jpg"
+        image="/pret-collection-hero.png"
         link="/pret-collection"
       />
       <CategorySection

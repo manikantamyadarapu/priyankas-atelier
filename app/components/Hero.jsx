@@ -23,10 +23,10 @@ export default function Hero() {
 
         <div className="hero-cta-panel">
           <div className="hero-cta-row">
-            <a href="/couture-collection" className="hero-btn hero-btn--outline">
+            <a href="/couture-collection" className="category-button-overlay">
               EXPLORE COLLECTIONS
             </a>
-            <a href="/contact-us" className="hero-btn hero-btn--solid">
+            <a href="https://calendly.com/care-priyankasatelier/30min" className="category-button-overlay">
               BOOK A CONSULT
             </a>
           </div>
