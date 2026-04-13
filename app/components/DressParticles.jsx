@@ -22,6 +22,7 @@ export default function DressParticles({ isActive }) {
     let bgParticles = [];
     let animationFrameId;
     let width, height;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
     let isVisible = true;
     let lastFrameTime = 0;
 
@@ -76,8 +77,12 @@ export default function DressParticles({ isActive }) {
     const targetPoints = getDetailedDressPoints(shapeParticleCount);
 
     const resize = () => {
-      width = canvas.width = container.offsetWidth;
-      height = canvas.height = container.offsetHeight;
+      width = container.offsetWidth;
+      height = container.offsetHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
       const scale = Math.min(width, height) * 0.75;
       const offsetX = width / 2;
       const offsetY = height / 2;
@@ -99,7 +104,7 @@ export default function DressParticles({ isActive }) {
         this.targetY = this.y;
         this.vx = (Math.random() - 0.5) * 1.5;
         this.vy = (Math.random() - 0.5) * 1.5;
-        this.size = isShape ? (Math.random() * 1.2 + 0.4) : (Math.random() * 0.8 + 0.4);
+        this.size = isShape ? (Math.random() * 1.1 + 0.55) : (Math.random() * 0.7 + 0.45);
         
         // --- Smooth Animation State ---
         this.activeProgress = 0; // Lerps from 0 to 1
@@ -162,8 +167,11 @@ export default function DressParticles({ isActive }) {
       }
     }
 
-    width = canvas.width = container.offsetWidth;
-    height = canvas.height = container.offsetHeight;
+    width = container.offsetWidth;
+    height = container.offsetHeight;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     for (let i = 0; i < shapeParticleCount; i++) {
       particles.push(new Particle(true));
     }

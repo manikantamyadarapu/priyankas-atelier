@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AboutUs from "../about-us/page";
 
 export default function Founder() {
   return (
@@ -23,7 +24,7 @@ export default function Founder() {
   thoughtfully designed to celebrate individuality, confidence,
   and grace in every woman.
 </p>
-          <a href="#" className="founder-link">About the founder</a>
+          <a href="/about-us" className="founder-link">About the founder</a>
         </div>
 
         {/* RIGHT IMAGE */}
