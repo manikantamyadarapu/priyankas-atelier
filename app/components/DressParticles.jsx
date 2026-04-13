@@ -5,25 +5,35 @@ import { useEffect, useRef } from "react";
 export default function DressParticles({ isActive }) {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
+  const activeRef = useRef(isActive);
+
+  useEffect(() => {
+    activeRef.current = isActive;
+  }, [isActive]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     const container = containerRef.current;
+    if (!container) return;
 
     let particles = [];
     let bgParticles = [];
     let animationFrameId;
     let width, height;
+    let isVisible = true;
+    let lastFrameTime = 0;
 
     // --- Gemini Reference Colors ---
     const THEME_COLOR_BASE = "66, 133, 244"; // RGB for Gemini Blue
     const THEME_COLOR_HL = "#ffffff";
     const BG_DOT_COLOR = "rgba(0, 0, 0, 0.1)";
 
-    const shapeParticleCount = 1800;
-    const bgParticleCount = 400;
+    const isSmallScreen = window.innerWidth < 768;
+    const shapeParticleCount = isSmallScreen ? 650 : 1200;
+    const bgParticleCount = isSmallScreen ? 120 : 220;
+    const frameInterval = 1000 / 36;
 
     const getDetailedDressPoints = (count) => {
       const points = [];
@@ -93,10 +103,10 @@ export default function DressParticles({ isActive }) {
         
         // --- Smooth Animation State ---
         this.activeProgress = 0; // Lerps from 0 to 1
-        this.ease = 0.04 + Math.random() * 0.04;
+        this.ease = 0.055 + Math.random() * 0.045;
       }
 
-      update(active) {
+      update(active, time) {
         // Smoothly transition between free-drifting and shape-holding
         const targetProgress = active ? 1 : 0;
         this.activeProgress += (targetProgress - this.activeProgress) * this.ease;
@@ -116,8 +126,8 @@ export default function DressParticles({ isActive }) {
           this.y += this.vy * driftStrength;
 
           // Organic breathing
-          this.x += Math.sin(Date.now() * 0.002 + this.targetY * 0.05) * 0.4 * this.activeProgress;
-          this.y += Math.cos(Date.now() * 0.002 + this.targetX * 0.05) * 0.4 * this.activeProgress;
+          this.x += Math.sin(time * 0.0024 + this.targetY * 0.05) * 0.3 * this.activeProgress;
+          this.y += Math.cos(time * 0.0024 + this.targetX * 0.05) * 0.3 * this.activeProgress;
         } else {
           this.x += this.vx;
           this.y += this.vy;
@@ -144,9 +154,9 @@ export default function DressParticles({ isActive }) {
         ctx.fill();
         
         // Twinkle only when mostly formed
-        if (this.isShape && this.activeProgress > 0.8 && Math.random() > 0.99) {
+        if (this.isShape && this.activeProgress > 0.7 && Math.random() > 0.985) {
            ctx.fillStyle = THEME_COLOR_HL;
-           ctx.arc(this.x, this.y, this.size * 1.2, 0, Math.PI * 2);
+           ctx.arc(this.x, this.y, this.size * 1.7, 0, Math.PI * 2);
            ctx.fill();
         }
       }
@@ -162,30 +172,48 @@ export default function DressParticles({ isActive }) {
     }
     resize();
 
-    const animate = () => {
+    const animate = (time) => {
+      if (!isVisible) {
+        animationFrameId = requestAnimationFrame(animate);
+        return;
+      }
+
+      if (time - lastFrameTime < frameInterval) {
+        animationFrameId = requestAnimationFrame(animate);
+        return;
+      }
+
+      lastFrameTime = time;
       ctx.clearRect(0, 0, width, height);
 
       bgParticles.forEach(p => {
-        p.update(false);
+        p.update(false, time);
         p.draw();
       });
 
+      const active = activeRef.current;
       particles.forEach(p => {
-        p.update(isActive);
+        p.update(active, time);
         p.draw();
       });
       
       animationFrameId = requestAnimationFrame(animate);
     };
 
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+    });
+
+    observer.observe(container);
     window.addEventListener("resize", resize);
-    animate();
+    animationFrameId = requestAnimationFrame(animate);
 
     return () => {
+      observer.disconnect();
       window.removeEventListener("resize", resize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isActive]);
+  }, []);
 
   return (
     <div ref={containerRef} className="dress-particles-container">

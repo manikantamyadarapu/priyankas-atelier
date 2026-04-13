@@ -11,7 +11,6 @@ export default function MiniAtelier() {
         <div className="couture-hero-content">
           <h1>Mini Atelier</h1>
           <p>Handcrafted couture for the little ones.</p>
-          <a href="#explore" className="couture-button">Explore Collection →</a>
         </div>
       </section>
 

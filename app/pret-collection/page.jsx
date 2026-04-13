@@ -11,7 +11,6 @@ export default function PretCollection() {
         <div className="couture-hero-content">
           <h1>Pret Collection</h1>
           <p>A blend of comfort, refinement, and everyday elegance.</p>
-          <a href="#explore" className="couture-button">Explore Collection →</a>
         </div>
       </section>
 
