@@ -6,7 +6,7 @@ export default function MiniAtelier() {
 
       {/* HERO */}
       <section className="couture-hero">
-        <img src="/images/mini-hero.jpg" className="couture-hero-img" />
+        <img src="/kids-hero.png" className="couture-hero-img" />
         
         <div className="couture-hero-content">
           <h1>Mini Atelier</h1>

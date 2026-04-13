@@ -1,4 +1,7 @@
 import PolicyPage from "../components/PolicyPage";
+import Navbar from "../components/Navbar";
+import BookAConsult from "../components/book-a-consult";
+import Footer from "../components/Footer";
 
 export default function TermsPage() {
   const sections = [
@@ -69,5 +72,12 @@ export default function TermsPage() {
     }
   ];
 
-  return <PolicyPage title="Terms of Usage" sections={sections} />;
+  return (
+    <main>
+      <Navbar />
+      <PolicyPage title="Terms of Usage" sections={sections} />
+      <BookAConsult />
+      <Footer />
+    </main>
+  );
 }

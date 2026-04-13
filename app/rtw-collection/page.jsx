@@ -6,7 +6,7 @@ export default function RTWCollection() {
 
       {/* HERO */}
       <section className="couture-hero">
-        <img src="/images/rtw-hero.jpg" className="couture-hero-img" />
+        <img src="/rtw-hero.jpg" className="couture-hero-img" />
         
         <div className="couture-hero-content">
           <h1>RTW Collection</h1>

@@ -6,7 +6,7 @@ export default function PretCollection() {
 
       {/* HERO */}
       <section className="couture-hero">
-        <img src="/images/pret-hero.jpg" className="couture-hero-img" />
+        <img src="/pret-collection-hero.png" className="couture-hero-img" />
         
         <div className="couture-hero-content">
           <h1>Pret Collection</h1>

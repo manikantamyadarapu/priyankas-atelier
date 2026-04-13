@@ -9,7 +9,7 @@ export default function BlousePage() {
           1. HERO BANNER
       ============================ */}
       <section className="couture-hero">
-        <img src="/images/blouse-hero.jpg" className="couture-hero-img" />
+        <img src="/blouses-hero.png" className="couture-hero-img" />
 
         <div className="couture-hero-content">
           <h1>Blouse Collection</h1>

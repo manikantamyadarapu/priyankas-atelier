@@ -1,9 +1,19 @@
 "use client";
 
+import { useState } from "react";
+import DressParticles from "./DressParticles";
+
 export default function BookAConsult() {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <section className="book-consult-wrapper">
+    <section 
+      className="book-consult-wrapper"
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+    >
       <div className="book-consult-card">
+        <DressParticles isActive={isActive} />
         <p className="book-consult-eyebrow">Personal Styling Session</p>
         <h2 className="book-consult-title">Book A Consultation</h2>
         <p className="book-consult-description">

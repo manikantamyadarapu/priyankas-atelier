@@ -49,7 +49,7 @@ export default function ContactPage() {
             style={{ marginTop: '2rem' }}
             className="category-button-overlay"
           >
-            Start Conversation →
+            Start Conversation
           </a>
         </div>
 

@@ -9,7 +9,7 @@ export default function Gowns() {
           1. HERO BANNER
       ============================ */}
       <section className="couture-hero">
-        <img src="/images/gown-hero.jpg" className="couture-hero-img" />
+        <img src="/gowns-hero.png" className="couture-hero-img" />
         
         <div className="couture-hero-content">
           <h1>Gowns</h1>
