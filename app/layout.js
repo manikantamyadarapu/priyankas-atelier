@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
-import CursorEffect from "./components/CursorEffect";
+import PageExperience from "./components/PageExperience";
 import SmoothScroll from "./components/SmoothScroll";
 
 const cormorant = Cormorant_Garamond({
@@ -24,8 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${cormorant.variable} ${outfit.variable} ${cormorant.className}`}>
         <SmoothScroll />
-        <CursorEffect />
-        {children}
+        <PageExperience>{children}</PageExperience>
       </body>
     </html>
   );

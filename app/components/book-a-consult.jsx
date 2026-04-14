@@ -51,7 +51,7 @@ export default function BookAConsult() {
           </a>
 
           <a
-            href="/contact-us"
+            href="https://wa.me/8186962340"
             className="book-consult-btn book-consult-btn--ghost"
           >
             Contact Studio
