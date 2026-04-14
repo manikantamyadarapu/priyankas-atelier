@@ -553,74 +553,58 @@ body {
 
 .contact-container {
   min-height: 100vh;
-  background: #ffffff; /* Matching main background */
+  background: #000000;
+  margin: 0.3125rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 6rem 2rem 2rem;
-}
-
-/* CENTER BOX (CONSULT STYLE) */
-.contact-box {
-  width: clamp(calc(100% - 1.25rem), calc(100% - 4vw), calc(100% - 4rem));
-  max-width: clamp(960px, 90vw, 1300px);
-  min-height: clamp(320px, 40vw, 640px);
-  margin: 0 auto;
-  background: #000000;
   border-radius: 6px;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
 }
 
-@media (max-width: 900px) {
-  .contact-box {
-    flex-direction: column;
-  }
-}
-
-.contact-image-side {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
-}
-
-.contact-image-side img {
+.contact-box {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 56rem;
+  margin: 0 auto;
 }
 
 .contact-content-side {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: clamp(2rem, 5vw, 5rem);
+  padding: clamp(2rem, 5vw, 5rem) clamp(1.25rem, 5vw, 4rem);
 }
 
-/* TITLE */
+.contact-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.58);
+  margin-bottom: 1rem;
+  font-family: var(--font-outfit), sans-serif;
+}
+
 .contact-title {
-  font-size: 1.6rem;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 400;
   letter-spacing: 0.25rem;
   margin-bottom: 1.5rem;
   color: white;
   font-family: "Cormorant Garamond", serif;
 }
 
-/* SUBTEXT */
 .contact-subtext {
-  font-size: 0.9rem;
+  max-width: 36rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: rgb(170,170,170);
-  margin-bottom: 2rem;
-  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
   font-family: var(--font-outfit), sans-serif;
 }
 
-/* DETAILS */
 .contact-details {
   display: flex;
   flex-direction: column;
@@ -643,16 +627,19 @@ body {
   color: rgba(255,255,255,0.7);
 }
 
-/* BUTTON */
 .contact-btn {
   display: inline-block;
-  padding: 10px 20px;
+  margin-top: 0.5rem;
+  padding: 0.9rem 2.2rem;
   background: white;
   color: black;
   font-size: 0.85rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.12rem;
   text-decoration: none;
   transition: 0.3s;
+  text-transform: uppercase;
+  font-family: var(--font-outfit), sans-serif;
+  border-radius: 6px;
 }
 
 .contact-btn:hover {

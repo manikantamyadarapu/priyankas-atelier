@@ -114,7 +114,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/8186962340"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon"
