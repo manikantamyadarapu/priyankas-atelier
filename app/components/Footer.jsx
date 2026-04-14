@@ -94,6 +94,7 @@ export default function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              suppressHydrationWarning
             />
             <button type="submit" className="newsletter-btn">
               Subscribe
@@ -101,7 +102,6 @@ export default function Footer() {
           </form>
         </div>
       </div>
-
       <div className="copyright">
         <div className="footer-socials footer-socials--copyright">
           <a
