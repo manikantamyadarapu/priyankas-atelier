@@ -13,7 +13,6 @@ export default function LehengaSet() {
         <div className="couture-hero-content">
           <h1>Lehenga Set</h1>
           <p>Elegantly handcrafted lehengas for every celebration.</p>
-          <a href="#explore" className="couture-button">Explore Collection →</a>
         </div>
       </section>
 
