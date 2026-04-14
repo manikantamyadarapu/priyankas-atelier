@@ -56,64 +56,6 @@ button:active {
   transform: scale(0.96);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  body,
-  a,
-  button,
-  [role="button"],
-  [data-cursor-hover] {
-    cursor: none;
-  }
-
-  .cursor-dot,
-  .cursor-ring {
-    position: fixed;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    border-radius: 999px;
-    transform: translate(-50%, -50%);
-    z-index: 6000;
-    will-change: left, top, width, height, opacity;
-  }
-
-  .cursor-dot {
-    width: 0.32rem;
-    height: 0.32rem;
-    background: rgba(255, 255, 255, 0.9);
-    mix-blend-mode: difference;
-  }
-
-  .cursor-ring {
-    width: 2.1rem;
-    height: 2.1rem;
-    border: 1px solid rgba(255, 255, 255, 0.58);
-    background: rgba(255, 255, 255, 0.035);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    mix-blend-mode: difference;
-    transition:
-      width 0.28s ease,
-      height 0.28s ease,
-      border-color 0.28s ease,
-      background 0.28s ease;
-  }
-
-  .cursor-ring--hover {
-    width: 3.25rem;
-    height: 3.25rem;
-    border-color: rgba(255, 255, 255, 0.82);
-    background: rgba(255, 255, 255, 0.08);
-  }
-}
-
-@media (hover: none), (pointer: coarse) {
-  .cursor-dot,
-  .cursor-ring {
-    display: none;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -222,7 +164,7 @@ button:active {
 
 .hero-cta-row {
   display: flex;
-  gap: clamp(0.75rem, 2vw, 1.25rem) !important;
+  gap: clamp(0.75rem, 2vw, 1.25rem) ;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -376,7 +318,7 @@ button:active {
   }
 
   .hero-content {
-    top: 60%;
+    top: 63%;
     bottom: auto;
     transform: translate(-50%, -50%);
     width: min(calc(100% - 2rem), 38rem);
@@ -387,7 +329,7 @@ button:active {
     font-size: clamp(2.15rem, 10.2vw, 4.05rem);
     line-height: 1.1;
     letter-spacing: 0.05em;
-    margin-bottom: 1.35rem;
+    margin-bottom: 0.8rem;
   }
 
   .hero-sub {
@@ -1097,7 +1039,6 @@ button:active {
 
 .category-button-overlay {
   display: inline-flex;
-  margin: 0 auto;
   padding: 1.1rem 3.4rem;
 
   /* ✨ Glass border */
