@@ -105,7 +105,7 @@ export default function Footer() {
       <div className="copyright">
         <div className="footer-socials footer-socials--copyright">
           <a
-            href="https://www.instagram.com/priyankasatelier"
+            href="https://www.instagram.com/priyankas_atelier/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon"
