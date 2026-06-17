@@ -14,7 +14,6 @@ const navItems = [
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "tel:8186962340" },
 ];
-
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
