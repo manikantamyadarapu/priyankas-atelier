@@ -6,7 +6,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Couture Collection", href: "/couture-collection" },
   { label: "Blouses", href: "/blouses" },
-  { label: "Lehenga Set", href: "/lehanga-set" },
+  { label: "Lehenga Set", href: "/lehenga-set" },
   { label: "Gowns", href: "/Gowns" },
   { label: "RTW Collection", href: "/rtw-collection" },
   { label: "Pret Collection", href: "/pret-collection" },
